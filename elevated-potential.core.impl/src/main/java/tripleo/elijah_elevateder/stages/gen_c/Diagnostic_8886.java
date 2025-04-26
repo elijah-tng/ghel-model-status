@@ -1,7 +1,7 @@
 package tripleo.elijah_elevateder.stages.gen_c;
 
 import org.jetbrains.annotations.NotNull;
-import tripleo.elijah_fluffy.diagnostic.Locatable;
+import tripleo.elijah_fluffy.diagnostic.ElLocatable;
 import tripleo.elijah_elevateder.stages.deduce.post_bytecode.GCFM_Diagnostic;
 
 import java.io.PrintStream;
@@ -21,7 +21,7 @@ class Diagnostic_8886 implements GCFM_Diagnostic {
 	}
 
 	@Override
-	public @NotNull Locatable primary() {
+	public @NotNull ElLocatable primary() {
 		return null;
 	}
 
@@ -31,7 +31,7 @@ class Diagnostic_8886 implements GCFM_Diagnostic {
 	}
 
 	@Override
-	public @NotNull List<Locatable> secondary() {
+	public @NotNull List<ElLocatable> secondary() {
 		return null;
 	}
 

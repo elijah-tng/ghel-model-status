@@ -2,9 +2,9 @@ package tripleo.elijah.lang.i;
 
 import org.jetbrains.annotations.*;
 import tripleo.elijah.lang.nextgen.names.i.*;
-import tripleo.elijah_fluffy.diagnostic.Locatable;
+import tripleo.elijah_fluffy.diagnostic.ElLocatable;
 
-public interface IdentExpression extends IExpression, OS_Element, Locatable {
+public interface IdentExpression extends IExpression, OS_Element, ElLocatable {
 
 	@Override
 	ExpressionKind getKind();

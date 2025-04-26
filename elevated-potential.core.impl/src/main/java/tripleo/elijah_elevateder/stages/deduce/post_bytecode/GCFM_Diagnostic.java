@@ -1,13 +1,13 @@
 package tripleo.elijah_elevateder.stages.deduce.post_bytecode;
 
 import org.jetbrains.annotations.NotNull;
-import tripleo.elijah_fluffy.diagnostic.Diagnostic;
-import tripleo.elijah_fluffy.diagnostic.Locatable;
+import tripleo.elijah_fluffy.diagnostic.ElDiagnostic;
+import tripleo.elijah_fluffy.diagnostic.ElLocatable;
 
 import java.io.PrintStream;
 import java.util.List;
 
-public interface GCFM_Diagnostic extends Diagnostic {
+public interface GCFM_Diagnostic extends ElDiagnostic {
 	static @NotNull GCFM_Diagnostic forThis(final @NotNull String aMessage, final @NotNull String aCode,
 			final @NotNull Severity aSeverity) {
 		return new GCFM_Diagnostic() {
@@ -22,7 +22,7 @@ public interface GCFM_Diagnostic extends Diagnostic {
 			}
 
 			@Override
-			public @NotNull Locatable primary() {
+			public @NotNull ElLocatable primary() {
 				return null;
 			}
 
@@ -32,7 +32,7 @@ public interface GCFM_Diagnostic extends Diagnostic {
 			}
 
 			@Override
-			public @NotNull List<Locatable> secondary() {
+			public @NotNull List<ElLocatable> secondary() {
 				return null;
 			}
 

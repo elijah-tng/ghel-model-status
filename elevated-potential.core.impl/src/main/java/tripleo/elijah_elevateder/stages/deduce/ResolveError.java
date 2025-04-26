@@ -12,8 +12,8 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tripleo.elijah.g.GResolveError;
 import tripleo.elijah.lang.i.*;
-import tripleo.elijah_fluffy.diagnostic.Diagnostic;
-import tripleo.elijah_fluffy.diagnostic.Locatable;
+import tripleo.elijah_fluffy.diagnostic.ElDiagnostic;
+import tripleo.elijah_fluffy.diagnostic.ElLocatable;
 
 import java.io.PrintStream;
 import java.util.List;
@@ -22,7 +22,7 @@ import java.util.stream.Collectors;
 /**
  * Created 12/26/20 5:08 AM
  */
-public class ResolveError extends GResolveError implements Diagnostic {
+public class ResolveError extends GResolveError implements ElDiagnostic {
 	private final @org.jetbrains.annotations.Nullable IdentExpression ident;
 	private final LookupResultList lrl;
 	private final @org.jetbrains.annotations.Nullable TypeName typeName;
@@ -52,7 +52,7 @@ public class ResolveError extends GResolveError implements Diagnostic {
 	}
 
 	@Override
-	public @NotNull Locatable primary() {
+	public @NotNull ElLocatable primary() {
 		if (typeName == null) {
 			return ident;
 		} else
@@ -63,7 +63,7 @@ public class ResolveError extends GResolveError implements Diagnostic {
 	public void report(@NotNull PrintStream stream) {
 		stream.printf("---[%s]---: %s%n", code(), message());
 		// linecache.print(primary);
-		for (Locatable sec : secondary()) {
+		for (ElLocatable sec : secondary()) {
 			// linecache.print(sec)
 		}
 		stream.flush();
@@ -75,8 +75,8 @@ public class ResolveError extends GResolveError implements Diagnostic {
 	}
 
 	@Override
-	public @NotNull List<Locatable> secondary() {
-		return resultsList().stream().map(e -> (Locatable) e.getElement()).collect(Collectors.toList());
+	public @NotNull List<ElLocatable> secondary() {
+		return resultsList().stream().map(e -> (ElLocatable) e.getElement()).collect(Collectors.toList());
 	}
 
 	@Override

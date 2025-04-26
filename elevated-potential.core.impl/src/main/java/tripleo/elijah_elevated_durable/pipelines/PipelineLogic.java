@@ -14,7 +14,7 @@ import io.reactivex.rxjava3.annotations.NonNull;
 import org.jdeferred2.DoneCallback;
 import org.jetbrains.annotations.NotNull;
 import tripleo.elijah.comp.i.ICompilationAccess;
-import tripleo.elijah_fluffy.diagnostic.Diagnostic;
+import tripleo.elijah_fluffy.diagnostic.ElDiagnostic;
 import tripleo.elijah.g.GPipelineLogic;
 import tripleo.elijah.lang.i.OS_Module;
 import tripleo.elijah.stages.logging.ElLog;
@@ -214,7 +214,7 @@ public class PipelineLogic implements EventualRegister, GPipelineLogic {
 		}
 
 		@Override
-		public void error(final Diagnostic d) {
+		public void error(final ElDiagnostic d) {
 //			throw new UnintendedUseException();
 		}
 
@@ -247,7 +247,7 @@ public class PipelineLogic implements EventualRegister, GPipelineLogic {
 		}
 
 		@Override
-		public void error(final Diagnostic d) {
+		public void error(final ElDiagnostic d) {
 			throw new UnintendedUseException("not expected, remove after tests");
 		}
 

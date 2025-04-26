@@ -1,7 +1,6 @@
 package tripleo.elijah_elevateder.comp.queries;
 
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 import tripleo.elijah.ci.CompilerInstructions;
 import tripleo.elijah.comp.graph.i.CK_SourceFile;
 import tripleo.elijah.comp.i.CompilationClosure;
@@ -9,14 +8,9 @@ import tripleo.elijah.comp.queries.CompilerInstructions_Result;
 import tripleo.elijah.comp.queries.QSEZ_Reasoning;
 import tripleo.elijah_elevated_durable.graph_impl.CK_SourceFileFactory;
 import tripleo.elijah_elevateder.comp.i.Compilation;
-import tripleo.elijah_fluffy.diagnostic.Diagnostic;
-import tripleo.elijah_fluffy.diagnostic.Locatable;
 import tripleo.elijah_fluffy.util.Operation2;
-import tripleo.wrap.File;
 
 import java.io.FilenameFilter;
-import java.io.PrintStream;
-import java.util.List;
 import java.util.regex.Pattern;
 
 public class QuerySearchEzFiles {
@@ -72,40 +66,6 @@ public class QuerySearchEzFiles {
 		return R;
 	}
 */
-
-	public static class Diagnostic_9995 implements Diagnostic {
-		private final File file;
-		private final int  code = 9995;
-
-		public Diagnostic_9995(final File aFile) {
-			file = aFile;
-		}
-
-		@Override
-		public @Nullable String code() {
-			return "" + code;
-		}
-
-		@Override
-		public @NotNull Locatable primary() {
-			return null;
-		}
-
-		@Override
-		public void report(final PrintStream stream) {
-
-		}
-
-		@Override
-		public @NotNull List<Locatable> secondary() {
-			return null;
-		}
-
-		@Override
-		public @Nullable Severity severity() {
-			return null;
-		}
-	}
 
 	public static class EzFilesFilter implements FilenameFilter {
 		@Override

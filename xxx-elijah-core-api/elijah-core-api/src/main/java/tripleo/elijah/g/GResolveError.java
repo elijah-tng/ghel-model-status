@@ -1,6 +1,6 @@
 package tripleo.elijah.g;
 
-import tripleo.elijah_fluffy.diagnostic.Diagnostic;
+import tripleo.elijah_fluffy.diagnostic.ElDiagnostic;
 
-public abstract class GResolveError extends Exception implements Diagnostic {
+public abstract class GResolveError extends Exception implements ElDiagnostic {
 }

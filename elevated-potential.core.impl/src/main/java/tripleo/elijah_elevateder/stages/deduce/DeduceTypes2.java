@@ -18,7 +18,7 @@ import org.jdeferred2.impl.DeferredObject;
 import org.jetbrains.annotations.*;
 import tripleo.elijah.comp.i.ErrSink;
 import tripleo.elijah.comp.i.ICompilationAccess;
-import tripleo.elijah_fluffy.diagnostic.Diagnostic;
+import tripleo.elijah_fluffy.diagnostic.ElDiagnostic;
 import tripleo.elijah.g.GCompilationEnclosure;
 import tripleo.elijah.g.GModuleThing;
 import tripleo.elijah.lang.i.*;
@@ -1369,7 +1369,7 @@ public class DeduceTypes2 implements GDeduceTypes2 {
 			return new DeferredObject<>();
 		}
 
-		public DeferredObject<GenType, Diagnostic, Void> new_DeferredObject__GenType() {
+		public DeferredObject<GenType, ElDiagnostic, Void> new_DeferredObject__GenType() {
 			return new DeferredObject<>();
 		}
 
@@ -1394,11 +1394,11 @@ public class DeduceTypes2 implements GDeduceTypes2 {
 			return new DG_FunctionDef(aFunctionDef);
 		}
 
-		public Diagnostic new_Diagnostic_8884(final VariableTableEntry aVte, final BaseEvaFunction aGf) {
+		public ElDiagnostic new_Diagnostic_8884(final VariableTableEntry aVte, final BaseEvaFunction aGf) {
 			return new DeduceElement3_VariableTableEntry.Diagnostic_8884(aVte, aGf);
 		}
 
-		public Diagnostic new_Diagnostic_8885(final VariableTableEntry aVte) {
+		public ElDiagnostic new_Diagnostic_8885(final VariableTableEntry aVte) {
 			return new DeduceElement3_VariableTableEntry.Diagnostic_8885(aVte);
 		}
 
@@ -1717,11 +1717,11 @@ public class DeduceTypes2 implements GDeduceTypes2 {
 			return new Resolve_Variable_Table_Entry(aGeneratedFunction, aContext, aDeduceTypes2);
 		}
 
-		public Diagnostic new_ResolveError(final IdentExpression aIdent, final LookupResultList aLrl) {
+		public ElDiagnostic new_ResolveError(final IdentExpression aIdent, final LookupResultList aLrl) {
 			return new ResolveError(aIdent, aLrl);
 		}
 
-		public Diagnostic new_ResolveError(final TypeName aX, final LookupResultList aLrl) {
+		public ElDiagnostic new_ResolveError(final TypeName aX, final LookupResultList aLrl) {
 			return new ResolveError(aX, aLrl);
 		}
 

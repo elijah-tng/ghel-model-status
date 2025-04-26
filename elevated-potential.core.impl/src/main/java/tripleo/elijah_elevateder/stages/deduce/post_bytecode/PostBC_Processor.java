@@ -10,7 +10,7 @@ import tripleo.elijah.lang.i.*;
 import tripleo.elijah_elevateder.stages.deduce.*;
 import tripleo.elijah_elevateder.stages.gen_fn.GenType;
 import tripleo.elijah_elevateder.stages.gen_fn.VariableTableEntry;
-import tripleo.elijah_fluffy.diagnostic.Diagnostic;
+import tripleo.elijah_fluffy.diagnostic.ElDiagnostic;
 import tripleo.elijah_fluffy.util.*;
 
 import java.util.function.*;
@@ -120,18 +120,18 @@ public interface PostBC_Processor {
 		}
 
 		@Override
-		public Promise<DeduceType3, Diagnostic, Void> getType(final ErrSink aErrSink) {
-			final Promise<DeduceType3, Diagnostic, Void> dty = postBC_getTypeFor_VTE(vte(), ctx(), aErrSink);
+		public Promise<DeduceType3, ElDiagnostic, Void> getType(final ErrSink aErrSink) {
+			final Promise<DeduceType3, ElDiagnostic, Void> dty = postBC_getTypeFor_VTE(vte(), ctx(), aErrSink);
 			return dty;
 		}
 
-		private Promise<DeduceType3, Diagnostic, Void> postBC_getTypeFor_VTE(final @NotNull VariableTableEntry vte,
-				final Context fd_ctx, final ErrSink errSink) {
+		private Promise<DeduceType3, ElDiagnostic, Void> postBC_getTypeFor_VTE(final @NotNull VariableTableEntry vte,
+		                                                                       final Context fd_ctx, final ErrSink errSink) {
 			final DeduceType3 r;
 			final DeduceTypes2.DeduceClient1 deduceClient1 = deduceTypes2();
 			final OS_Type vte_type_attached = vte.getTypeTableEntry().getAttached();
 
-			final DeferredObject<DeduceType3, Diagnostic, Void> rr = new DeferredObject<DeduceType3, Diagnostic, Void>();
+			final DeferredObject<DeduceType3, ElDiagnostic, Void> rr = new DeferredObject<DeduceType3, ElDiagnostic, Void>();
 
 			if (vte_type_attached == null) {
 				final DeduceType3 r2 = vte.getPostBC_Processor(fd_ctx, deduceClient1).doNoTypeAttached(errSink);
@@ -237,7 +237,7 @@ public interface PostBC_Processor {
 					r = Maybe.of(aGenType.getResolved()); // TODO incomplete!! (send whole GenType)
 					// -------------------------- vte.type.setAttached(aGenType);
 				} catch (final ResolveError aResolveError) {
-					r = Maybe.of_exc((Diagnostic) aResolveError);
+					r = Maybe.of_exc((ElDiagnostic) aResolveError);
 					// -------------------------- aResolveError.printStackTrace();
 					// -------------------------- assert false;
 				}
@@ -442,5 +442,5 @@ public interface PostBC_Processor {
 
 	void doSetType(DeduceType3 aDeduceType3, ErrSink aErrSink1);
 
-	Promise<DeduceType3, Diagnostic, Void> getType(final ErrSink aErrSink1);
+	Promise<DeduceType3, ElDiagnostic, Void> getType(final ErrSink aErrSink1);
 }

@@ -9,7 +9,7 @@ import tripleo.elijah.nextgen.outputtree.*;
 import tripleo.elijah_elevateder.comp.i.Compilation;
 import tripleo.elijah_elevateder.nextgen.outputtree.EOT_OutputFileImpl;
 import tripleo.elijah_elevateder.world.i.WorldModule;
-import tripleo.elijah_fluffy.diagnostic.Diagnostic;
+import tripleo.elijah_fluffy.diagnostic.ElDiagnostic;
 import tripleo.elijah_fluffy.util.CompletableProcess;
 
 import java.util.*;
@@ -46,7 +46,7 @@ public class LawabidingcitizenPipelineImpl {
 			}
 
 			@Override
-			public void error(Diagnostic d) {
+			public void error(ElDiagnostic d) {
 
 			}
 

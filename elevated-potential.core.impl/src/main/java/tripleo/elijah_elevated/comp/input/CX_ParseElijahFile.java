@@ -16,7 +16,7 @@ import tripleo.elijah_elevated_durable.parser.antlr2.ElijjahLexer;
 import tripleo.elijah_elevated_durable.parser.antlr2.ElijjahParser;
 import tripleo.elijah_elevateder.comp.i.Compilation;
 import tripleo.elijah_elevateder.comp.specs.EDL_ElijahSpec;
-import tripleo.elijah_fluffy.diagnostic.Diagnostic;
+import tripleo.elijah_fluffy.diagnostic.ElDiagnostic;
 import tripleo.elijah_fluffy.util.*;
 import tripleo.wrap.File;
 
@@ -43,7 +43,7 @@ public class CX_ParseElijahFile {
 				calm = calculate(f, s, compilation, readFile.getLongPath1());
 
 				if (calm.mode() == Mode.FAILURE) {
-					final Diagnostic failure = calm.failure();
+					final ElDiagnostic failure = calm.failure();
 
 					if (failure.get() instanceof Exception e) {
 						assert e != null;

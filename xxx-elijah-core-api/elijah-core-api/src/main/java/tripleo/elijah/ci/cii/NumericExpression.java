@@ -2,9 +2,9 @@ package tripleo.elijah.ci.cii;
 
 import tripleo.elijah.ci.CiExpression;
 import tripleo.elijah.ci.ExpressionKind;
-import tripleo.elijah_fluffy.diagnostic.Locatable;
+import tripleo.elijah_fluffy.diagnostic.ElLocatable;
 
-public interface NumericExpression extends CiExpression, Locatable {
+public interface NumericExpression extends CiExpression, ElLocatable {
 	@Override
 	ExpressionKind getKind();
 

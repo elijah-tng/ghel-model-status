@@ -38,7 +38,7 @@ import tripleo.elijah_elevateder.stages.gen_fn.IClassGenerator;
 import tripleo.elijah_elevateder.stages.generate.OutputStrategyC;
 import tripleo.elijah_elevateder.stages.inter.ModuleThing;
 import tripleo.elijah_elevateder.world.i.WorldModule;
-import tripleo.elijah_fluffy.diagnostic.Diagnostic;
+import tripleo.elijah_fluffy.diagnostic.ElDiagnostic;
 import tripleo.elijah_fluffy.util.*;
 
 import java.util.*;
@@ -534,7 +534,7 @@ public class EDL_CompilationEnclosure implements CompilationEnclosure {
 		}
 
 		@Override
-		public void error(final Diagnostic d) {
+		public void error(final ElDiagnostic d) {
 
 		}
 

@@ -31,7 +31,7 @@ import tripleo.elijah_elevateder.stages.gen_generic.GenerateResult;
 import tripleo.elijah_elevateder.stages.gen_generic.GenerateResultEnv;
 import tripleo.elijah_elevateder.stages.gen_generic.pipeline_impl.GenerateResultSink;
 import tripleo.elijah_elevateder.stages.instructions.*;
-import tripleo.elijah_fluffy.diagnostic.Diagnostic;
+import tripleo.elijah_fluffy.diagnostic.ElDiagnostic;
 import tripleo.elijah_fluffy.util.*;
 
 import java.util.*;
@@ -90,7 +90,7 @@ public class Generate_Code_For_Method {
 		final Operation2<OS_Type> diag1 = de_vte.decl_test_001(yf.cheat());
 
 		if (diag1.mode() == Mode.FAILURE) {
-			final Diagnostic      diag_ = diag1.failure();
+			final ElDiagnostic    diag_ = diag1.failure();
 			final GCFM_Diagnostic diag  = (GCFM_Diagnostic) diag_;
 
 			switch (diag.severity()) {

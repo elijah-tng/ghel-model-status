@@ -42,7 +42,7 @@ import tripleo.elijah_elevateder.stages.post_deduce.DefaultCodeRegistrar;
 import tripleo.elijah_elevateder.work.EDL_WorkList;
 import tripleo.elijah_elevateder.work.EDL_WorkManager;
 import tripleo.elijah_elevateder.world.i.WorldModule;
-import tripleo.elijah_fluffy.diagnostic.Diagnostic;
+import tripleo.elijah_fluffy.diagnostic.ElDiagnostic;
 import tripleo.elijah_fluffy.util.*;
 
 import java.util.*;
@@ -864,12 +864,12 @@ public class DeducePhase extends _RegistrationTarget implements ReactiveDimensio
 			return new ClassInvocation(aParent, aConstructorName, aDeduceTypes2Supplier);
 		}
 
-		public Diagnostic new_CouldntGenerateClass(final ClassDefinition aCd, final GenerateFunctions aGf,
-		                                           final ClassInvocation aCi) {
+		public ElDiagnostic new_CouldntGenerateClass(final ClassDefinition aCd, final GenerateFunctions aGf,
+		                                             final ClassInvocation aCi) {
 			return new CouldntGenerateClass(aCd, aGf, aCi);
 		}
 
-		public Diagnostic new_CouldntGenerateClass(WlGenerateClass gen, DeducePhase deducePhase) {
+		public ElDiagnostic new_CouldntGenerateClass(WlGenerateClass gen, DeducePhase deducePhase) {
 			return new CouldntGenerateClass(gen, deducePhase);
 		}
 
@@ -1174,7 +1174,7 @@ public class DeducePhase extends _RegistrationTarget implements ReactiveDimensio
 			if (mod == null)
 				mod = aClassInvocation.getKlass().getContext().module();
 
-			DeferredObject<ClassDefinition, Diagnostic, Void> prom = new DeferredObject<>();
+			DeferredObject<ClassDefinition, ElDiagnostic, Void> prom = new DeferredObject<>();
 
 			final GenerateFunctions generateFunctions = generatePhase.getGenerateFunctions(mod);
 			wl.addJob(_inj().new_WlGenerateClass(generateFunctions, aClassInvocation, generatedClasses,

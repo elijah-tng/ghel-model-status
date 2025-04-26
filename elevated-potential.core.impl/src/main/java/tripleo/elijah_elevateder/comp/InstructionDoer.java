@@ -5,7 +5,7 @@ import tripleo.elijah.ci.*;
 import tripleo.elijah_elevated_durable.compilation_bus.EDL_CompilationRunner;
 import tripleo.elijah_elevated_durable.input.USE_Reasonings;
 import tripleo.elijah_elevateder.comp.i.Compilation;
-import tripleo.elijah_fluffy.diagnostic.Diagnostic;
+import tripleo.elijah_fluffy.diagnostic.ElDiagnostic;
 import tripleo.elijah_fluffy.util.CompletableProcess;
 import tripleo.elijah_fluffy.util.SimplePrintLoggerToRemoveSoon;
 
@@ -44,7 +44,7 @@ public class InstructionDoer implements CompletableProcess<CompilerInstructions>
 	}
 
 	@Override
-	public void error(final Diagnostic d) {
+	public void error(final ElDiagnostic d) {
 		SimplePrintLoggerToRemoveSoon.println_err_4("InstructionDoer::error");
 	}
 
