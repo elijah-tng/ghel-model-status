@@ -1,6 +1,6 @@
 package tripleo.elijah_elevated_durable.parser;
 
-import antlr.Token;
+import tripleo.vendor.antlr277.Token;
 import tripleo.elijah.ci.CiExpression;
 import tripleo.elijah.ci.CiExpressionList;
 import tripleo.elijah.ci.CiProcedureCallExpression;

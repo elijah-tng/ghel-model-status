@@ -1,6 +1,6 @@
 package tripleo.elijah_elevated_durable.parser;
 
-import antlr.Token;
+import tripleo.vendor.antlr277.Token;
 import tripleo.elijah.contexts.IWithContext;
 import tripleo.elijah.contexts.ModuleContext;
 import tripleo.elijah.lang.i.*;
