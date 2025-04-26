@@ -8,7 +8,7 @@ import tripleo.elijah.ci.cii.StringExpression;
 import tripleo.elijah.ci.cil.Helpers;
 import tripleo.elijah.comp.CompilerInput;
 import tripleo.elijah.compiler_model.CM_Filename;
-import tripleo.elijah.xlang.LocatableString;
+import tripleo.elijah_fluffy.xlang.LocatableString;
 import tripleo.wrap.File;
 
 import java.util.*;

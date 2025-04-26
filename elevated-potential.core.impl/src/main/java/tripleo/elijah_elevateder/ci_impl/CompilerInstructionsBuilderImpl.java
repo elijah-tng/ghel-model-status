@@ -5,7 +5,7 @@ import tripleo.elijah.ci.CompilerInstructions;
 import tripleo.elijah.ci.GenerateStatement;
 import tripleo.elijah.ci.LibraryStatementPart;
 import tripleo.elijah.compiler_model.CM_Filename;
-import tripleo.elijah.xlang.LocatableString;
+import tripleo.elijah_fluffy.xlang.LocatableString;
 import tripleo.elijah_fluffy.util.ProgramMightBeWrongIfYouAreHere;
 
 public class CompilerInstructionsBuilderImpl implements CompilerInstructions.CompilerInstructionsBuilder {

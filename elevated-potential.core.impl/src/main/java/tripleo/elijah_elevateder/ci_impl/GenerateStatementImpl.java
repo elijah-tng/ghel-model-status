@@ -8,11 +8,11 @@
  */
 package tripleo.elijah_elevateder.ci_impl;
 
-import antlr.Token;
+import tripleo.elijah_fluffy.xlang.LocatableString;
+import tripleo.vendor.antlr277.Token;
 import org.jetbrains.annotations.NotNull;
 import tripleo.elijah.ci.CiExpression;
 import tripleo.elijah.ci.GenerateStatement;
-import tripleo.elijah.xlang.LocatableString;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +26,7 @@ public class GenerateStatementImpl implements GenerateStatement {
 		dirs.add(new Directive(LocatableString.of(token), expression));
 	}
 
-	public final List<Directive> dirs = new ArrayList<Directive>();
+	public final List<Directive> dirs = new ArrayList<>();
 
 	//@Getter
 	public static class Directive {
