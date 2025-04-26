@@ -11,9 +11,6 @@ public interface FluffyComp extends EventualRegister {
 
 	FluffyModule module(OS_Module aModule);
 
-	@Override
+	@Override // ??
 	void checkFinishEventuals();
-
-	@Override
-	<P> void register(Eventual<P> e);
 }
