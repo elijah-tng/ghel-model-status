@@ -1,6 +1,6 @@
 package tripleo.elijah.lang.i;
 
-import antlr.*;
+import tripleo.vendor.antlr277.*;
 import org.jetbrains.annotations.*;
 import tripleo.elijah.lang2.*;
 

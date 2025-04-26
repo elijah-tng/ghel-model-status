@@ -1,6 +1,6 @@
 package tripleo.elijah.lang.i;
 
-import antlr.*;
+import tripleo.vendor.antlr277.*;
 import tripleo.elijah.lang2.*;
 
 public interface AccessNotation extends OS_Element {
