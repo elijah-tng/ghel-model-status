@@ -8,7 +8,7 @@
  */
 package tripleo.elijah_elevated_durable.lang_impl;
 
-import antlr.Token;
+import tripleo.vendor.antlr277.Token;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tripleo.elijah.contexts.ICaseContext;
@@ -178,7 +178,7 @@ public class CaseConditionalImpl implements CaseConditional {
 		/*
 		 * (non-Javadoc)
 		 *
-		 * @see tripleo.elijah.lang.impl.CaseConditional#addDocString(antlr.Token)
+		 * @see tripleo.elijah.lang.impl.CaseConditional#addDocString(tripleo.vendor.antlr277.Token)
 		 */
 		@Override
 		public void addDocString(final Token s1) {

@@ -1,7 +1,7 @@
 package tripleo.elijah_elevated.comp.input;
 
-import antlr.RecognitionException;
-import antlr.TokenStreamException;
+import tripleo.vendor.antlr277.RecognitionException;
+import tripleo.vendor.antlr277.TokenStreamException;
 import org.jetbrains.annotations.NotNull;
 import tripleo.elijah.comp.IO;
 import tripleo.elijah.comp.graph.i.Asseverate;

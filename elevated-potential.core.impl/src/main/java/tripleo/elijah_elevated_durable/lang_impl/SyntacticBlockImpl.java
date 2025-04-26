@@ -8,7 +8,7 @@
  */
 package tripleo.elijah_elevated_durable.lang_impl;
 
-import antlr.*;
+import tripleo.vendor.antlr277.*;
 import com.google.common.base.*;
 import com.google.common.collect.*;
 import org.checkerframework.checker.nullness.qual.Nullable;
