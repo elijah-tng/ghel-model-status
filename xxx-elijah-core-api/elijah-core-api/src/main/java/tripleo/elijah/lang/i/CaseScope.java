@@ -1,6 +1,6 @@
 package tripleo.elijah.lang.i;
 
-import antlr.*;
+import tripleo.vendor.antlr277.*;
 import org.jetbrains.annotations.*;
 import tripleo.elijah.contexts.*;
 import tripleo.elijah.lang2.*;
@@ -20,7 +20,7 @@ public interface CaseScope extends OS_Container, OS_Element, CaseConditional {
 	/*
 	 * (non-Javadoc)
 	 *
-	 * @see tripleo.elijah.lang.impl.CaseConditional#addDocString(antlr.Token)
+	 * @see tripleo.elijah.lang.impl.CaseConditional#addDocString(tripleo.vendor.antlr277.Token)
 	 */
 	@Override
 	void addDocString(Token s1);
