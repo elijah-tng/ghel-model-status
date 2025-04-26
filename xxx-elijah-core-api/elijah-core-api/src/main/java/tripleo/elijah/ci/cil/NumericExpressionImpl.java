@@ -1,6 +1,6 @@
 package tripleo.elijah.ci.cil;
 
-import antlr.Token;
+import tripleo.vendor.antlr277.Token;
 import org.jetbrains.annotations.NotNull;
 import tripleo.elijah_fluffy.util.UnintendedUseException;
 import tripleo.elijah.ci.CiExpression;
