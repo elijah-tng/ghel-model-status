@@ -14,6 +14,7 @@ import io.reactivex.rxjava3.annotations.NonNull;
 import org.jdeferred2.DoneCallback;
 import org.jetbrains.annotations.NotNull;
 import tripleo.elijah.comp.i.ICompilationAccess;
+import tripleo.elijah_elevated_durable.comp_process._AbstractEventualRegister;
 import tripleo.elijah_fluffy.diagnostic.ElDiagnostic;
 import tripleo.elijah.g.GPipelineLogic;
 import tripleo.elijah.lang.i.OS_Module;
@@ -38,14 +39,13 @@ import static tripleo.elijah_elevateder.util.Helpers0.List_of;
 /**
  * Created 12/30/20 2:14 AM
  */
-public class PipelineLogic implements EventualRegister, GPipelineLogic {
+public class PipelineLogic extends _AbstractEventualRegister implements EventualRegister, GPipelineLogic {
 	public final @NotNull GeneratePhase             generatePhase;
 	public final @NotNull DeducePhase               dp;
 	final @NonNull         ModMap                   modMap     = new ModMap();
 	private final          ICompilationAccess       ca;
 	private final @NonNull ModuleCompletableProcess mcp        = new ModuleCompletableProcess();
 	private final @NonNull IPipelineAccess   pa;
-	private final          List<Eventual<?>> _eventuals = new ArrayList<>();
 	//	private final @NonNull EIT_ModuleList           mods   = new EIT_ModuleList();
 	public                GDM_Pipeline       pl         = new GDM_Pipeline() {
 		@Override
@@ -83,6 +83,17 @@ public class PipelineLogic implements EventualRegister, GPipelineLogic {
 	public Verbosity getVerbosity() {
 		// 24/01/04 back and forth
 		return ca.testSilence();
+	}
+
+	@Override
+	public @NotNull String _host() {
+		return "PipelineLogic::checkEventual";
+	}
+
+	@Override
+	public Operation<Ok> maybeCheckFinishEventuals() {
+		checkFinishEventuals();
+		return Operation.success(Ok.instance());
 	}
 
 	public interface GDM_Pipeline {
@@ -124,17 +135,6 @@ public class PipelineLogic implements EventualRegister, GPipelineLogic {
 		_pa().addLog(aLog);
 	}
 
-	@Override
-	public void checkFinishEventuals() {
-		int y = 0;
-		for (Eventual<?> eventual : _eventuals) {
-			if (eventual.isResolved()) {
-			} else {
-				SimplePrintLoggerToRemoveSoon.println_err_4("[PipelineLogic::checkEventual] failed for " + eventual.description());
-			}
-		}
-	}
-
 	@NotNull
 	public GenerateFunctions getGenerateFunctions(@NotNull OS_Module mod) {
 		return generatePhase.getGenerateFunctions(mod);
@@ -151,11 +151,6 @@ public class PipelineLogic implements EventualRegister, GPipelineLogic {
 		modMap.put(mod, p);
 
 		return p;
-	}
-
-	@Override
-	public <P> void register(final Eventual<P> e) {
-		_eventuals.add(e);
 	}
 
 	interface GDP_Module {

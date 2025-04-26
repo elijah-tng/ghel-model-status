@@ -31,6 +31,7 @@ import tripleo.elijah.g.GWorldModule;
 import tripleo.elijah.lang.i.*;
 import tripleo.elijah.nextgen.inputtree.EIT_InputTree;
 import tripleo.elijah.nextgen.outputtree.*;
+import tripleo.elijah_elevated_durable.comp_process._AbstractEventualRegister;
 import tripleo.elijah_elevated_durable.paths_impl.EDL_CP_Paths;
 import tripleo.elijah.stages.logging.ElLog;
 import tripleo.elijah_elevated.comp.backbone.CompilationEnclosure;
@@ -59,7 +60,7 @@ import java.util.*;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-public class EDL_Compilation implements Compilation, EventualRegister {
+public class EDL_Compilation extends _AbstractEventualRegister implements Compilation, EventualRegister {
 	private final List<CN_CompilerInputWatcher>                                  _ciws;
 	private final Map<CompilerInput, CM_CompilerInput>                           _ci_models;
 	private final List<Triple<CN_CompilerInputWatcher.e, CompilerInput, Object>> _ciw_buffer;
@@ -653,8 +654,14 @@ public class EDL_Compilation implements Compilation, EventualRegister {
 	}
 
 	@Override
-	public <P> void register(final Eventual<P> aEventual) {
-		//throw new UnintendedUseException();
+	public @NotNull String _host() {
+		return "EDL_Compilation";
+	}
+
+	@Override
+	public Operation<Ok> maybeCheckFinishEventuals() {
+		checkFinishEventuals();
+		return Operation.success(Ok.instance());
 	}
 
 	@Override
