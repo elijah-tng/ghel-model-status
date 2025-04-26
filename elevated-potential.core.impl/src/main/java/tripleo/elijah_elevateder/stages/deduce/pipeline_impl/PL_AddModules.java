@@ -4,7 +4,7 @@ import org.jetbrains.annotations.*;
 import tripleo.elijah_elevated_durable.pipelines.PipelineLogic;
 import tripleo.elijah_elevateder.comp.i.extra.IPipelineAccess;
 import tripleo.elijah_elevateder.world.i.WorldModule;
-import tripleo.elijah_fluffy.diagnostic.Diagnostic;
+import tripleo.elijah_fluffy.diagnostic.ElDiagnostic;
 import tripleo.elijah_fluffy.util.*;
 
 class PL_AddModules implements PipelineLogicRunnable {
@@ -27,7 +27,7 @@ class PL_AddModules implements PipelineLogicRunnable {
 			}
 
 			@Override
-			public void error(final Diagnostic d) {
+			public void error(final ElDiagnostic d) {
 			//	throw new UnintendedUseException();
 			}
 

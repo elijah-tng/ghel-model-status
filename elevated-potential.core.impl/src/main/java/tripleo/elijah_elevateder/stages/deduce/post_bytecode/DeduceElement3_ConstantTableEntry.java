@@ -1,7 +1,7 @@
 package tripleo.elijah_elevateder.stages.deduce.post_bytecode;
 
 import org.jetbrains.annotations.*;
-import tripleo.elijah_fluffy.diagnostic.Diagnostic;
+import tripleo.elijah_fluffy.diagnostic.ElDiagnostic;
 import tripleo.elijah.lang.i.*;
 import tripleo.elijah_fluffy.util.NotImplementedException;
 import tripleo.elijah_elevateder.stages.deduce.DeduceTypes2;
@@ -14,9 +14,9 @@ import tripleo.elijah_elevateder.stages.instructions.IdentIA;
 public class DeduceElement3_ConstantTableEntry implements IDeduceElement3 {
 
 	private final    ConstantTableEntry principal;
-	public           DeduceTypes2       deduceTypes2;
-	public           Diagnostic         diagnostic;
-	public           IDeduceElement3    deduceElement3;
+	public DeduceTypes2    deduceTypes2;
+	public ElDiagnostic    diagnostic;
+	public IDeduceElement3 deduceElement3;
 	private          GenType            genType;
 	public           BaseEvaFunction    generatedFunction;
 	public @Nullable OS_Type            osType;

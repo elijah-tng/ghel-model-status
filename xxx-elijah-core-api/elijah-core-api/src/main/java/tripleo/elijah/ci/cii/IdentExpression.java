@@ -6,9 +6,9 @@ import tripleo.elijah.ci.CiExpression;
 import tripleo.elijah.ci.ExpressionKind;
 import tripleo.elijah.ci.cil.Helpers;
 import tripleo.elijah.ci.cil.IdentExpressionImpl;
-import tripleo.elijah_fluffy.diagnostic.Locatable;
+import tripleo.elijah_fluffy.diagnostic.ElLocatable;
 
-public interface IdentExpression extends CiExpression, /*Resolvable,*/ Locatable {
+public interface IdentExpression extends CiExpression, /*Resolvable,*/ ElLocatable {
 	@Contract("_ -> new")
 	static @NotNull IdentExpression forString(String string) {
 		return new IdentExpressionImpl(Helpers.makeToken(string));

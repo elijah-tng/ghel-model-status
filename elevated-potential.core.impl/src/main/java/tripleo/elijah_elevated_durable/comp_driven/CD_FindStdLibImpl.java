@@ -85,8 +85,4 @@ public class CD_FindStdLibImpl implements CD_FindStdLib {
 			return foundResult.success();
 		return null;
 	}
-
-
-	static class NeverReached extends RuntimeException {
-	}
 }

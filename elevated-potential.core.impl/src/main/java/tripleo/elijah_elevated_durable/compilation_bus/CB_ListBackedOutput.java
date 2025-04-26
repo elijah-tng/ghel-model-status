@@ -3,7 +3,7 @@ package tripleo.elijah_elevated_durable.compilation_bus;
 import org.jetbrains.annotations.NotNull;
 import tripleo.elijah.comp.i.CB_Output;
 import tripleo.elijah.comp.i.CB_OutputString;
-import tripleo.elijah_fluffy.diagnostic.Diagnostic;
+import tripleo.elijah_fluffy.diagnostic.ElDiagnostic;
 import tripleo.elijah_elevateder.diagnostic.CodedOperationDiagnostic;
 
 import java.util.ArrayList;
@@ -32,7 +32,7 @@ public class CB_ListBackedOutput implements CB_Output {
 	}
 
 	@Override
-	public void logProgress(final Diagnostic aDiagnostic) {
+	public void logProgress(final ElDiagnostic aDiagnostic) {
 		if (aDiagnostic instanceof CodedOperationDiagnostic<?> coded) {
 			logProgress(coded.intCode(), coded.message());
 		} else {

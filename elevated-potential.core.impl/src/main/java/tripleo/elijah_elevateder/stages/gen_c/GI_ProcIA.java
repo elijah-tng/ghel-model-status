@@ -4,8 +4,8 @@ import org.apache.commons.lang3.tuple.Pair;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tripleo.elijah.comp.i.CompProgress;
-import tripleo.elijah_fluffy.diagnostic.Diagnostic;
-import tripleo.elijah_fluffy.diagnostic.Diagnostic.Severity;
+import tripleo.elijah_fluffy.diagnostic.ElDiagnostic;
+import tripleo.elijah_fluffy.diagnostic.ElDiagnostic.Severity;
 import tripleo.elijah_fluffy.diagnostic.ExceptionDiagnostic;
 import tripleo.elijah.lang.i.IdentExpression;
 import tripleo.elijah.nextgen.outputstatement.*;
@@ -64,7 +64,7 @@ class GI_ProcIA implements GenerateC_Item {
 			return Operation2.success(new EG_SingleStatement(s, EX_Explanation.withMessage("aaa")));
 		}
 
-		return Operation2.failure(Diagnostic.withMessage("12900", "no construct possible for GI_Proc", Severity.INFO));
+		return Operation2.failure(ElDiagnostic.withMessage("12900", "no construct possible for GI_Proc", Severity.INFO));
 	}
 
 	public String getAssignmentValue(final @NotNull Instruction aInstruction, final @NotNull GenerateC gc) {

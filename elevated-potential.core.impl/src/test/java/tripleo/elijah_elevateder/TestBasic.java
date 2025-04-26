@@ -23,7 +23,7 @@ import tripleo.elijah_elevateder.comp.i.ICompilationAccess3;
 import tripleo.elijah_elevateder.factory.NonOpinionatedBuilder;
 import tripleo.elijah_elevateder.factory.comp.CompilationFactory;
 import tripleo.elijah_elevateder.stages.gen_c.Emit;
-import tripleo.elijah_fluffy.diagnostic.Diagnostic;
+import tripleo.elijah_fluffy.diagnostic.ElDiagnostic;
 import tripleo.elijah_fluffy.util.Helpers;
 import tripleo.elijah_fluffy.util.SimplePrintLoggerToRemoveSoon;
 
@@ -85,7 +85,7 @@ public class TestBasic {
 				i++;
 
 				if (l == ErrSink.Errors.DIAGNOSTIC) {
-					((Diagnostic) r).report(System.out);
+					((ElDiagnostic) r).report(System.out);
 				} else {
 					SimplePrintLoggerToRemoveSoon.println_out_4(r);
 				}

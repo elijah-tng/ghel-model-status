@@ -7,12 +7,12 @@
  */
 package tripleo.elijah.ci.cii;
 
-import tripleo.elijah_fluffy.diagnostic.Locatable;
+import tripleo.elijah_fluffy.diagnostic.ElLocatable;
 
 /**
  * Created 8/16/20 2:16 AM
  */
-public interface TypeName extends Locatable {
+public interface TypeName extends ElLocatable {
 //	void setContext(Context context);
 
 	enum Nullability {

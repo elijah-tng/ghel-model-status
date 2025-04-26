@@ -3,7 +3,7 @@ package tripleo.elijah_elevateder.stages.deduce.post_bytecode;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tripleo.elijah.comp.i.ErrSink;
-import tripleo.elijah_fluffy.diagnostic.Diagnostic;
+import tripleo.elijah_fluffy.diagnostic.ElDiagnostic;
 import tripleo.elijah.lang.i.*;
 import tripleo.elijah.lang.types.OS_FuncType;
 import tripleo.elijah.work.WorkList;
@@ -639,9 +639,9 @@ public class DeduceElement3_ProcTableEntry implements IDeduceElement3 {
 			invocation = pte.getFunctionInvocation().getClassInvocation();
 		}
 		if (invocation == null) {
-			final Diagnostic diagnostic = Diagnostic.withMessage("523523",
-														"can't find invocation in __lfoe_action__getFunctionInvocation",
-														Diagnostic.Severity.WARN); // "WARN" !!
+			final ElDiagnostic diagnostic = ElDiagnostic.withMessage("523523",
+			                                                         "can't find invocation in __lfoe_action__getFunctionInvocation",
+			                                                         ElDiagnostic.Severity.WARN); // "WARN" !!
 			efi.fail(diagnostic);
 			return efi;
 		}

@@ -1,7 +1,7 @@
 package tripleo.elijah.comp.i;
 
 import org.jetbrains.annotations.NotNull;
-import tripleo.elijah_fluffy.diagnostic.Diagnostic;
+import tripleo.elijah_fluffy.diagnostic.ElDiagnostic;
 
 import java.util.*;
 
@@ -14,5 +14,5 @@ public interface CB_Output {
 
 	void print(String s);
 
-	void logProgress(Diagnostic aDiagnostic);
+	void logProgress(ElDiagnostic aDiagnostic);
 }

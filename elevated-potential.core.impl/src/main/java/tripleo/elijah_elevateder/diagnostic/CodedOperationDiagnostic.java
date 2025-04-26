@@ -2,8 +2,8 @@ package tripleo.elijah_elevateder.diagnostic;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import tripleo.elijah_fluffy.diagnostic.Diagnostic;
-import tripleo.elijah_fluffy.diagnostic.Locatable;
+import tripleo.elijah_fluffy.diagnostic.ElDiagnostic;
+import tripleo.elijah_fluffy.diagnostic.ElLocatable;
 import tripleo.elijah_fluffy.util.Operation;
 
 import java.io.PrintStream;
@@ -14,7 +14,7 @@ import java.util.List;
  *
  * @param <T>
  */
-public class CodedOperationDiagnostic<T> implements Diagnostic {
+public class CodedOperationDiagnostic<T> implements ElDiagnostic {
 	private final int       code;
 	private final String       message;
 	private final Operation<T> operation;
@@ -31,7 +31,7 @@ public class CodedOperationDiagnostic<T> implements Diagnostic {
 	}
 
 	@Override
-	public @NotNull Locatable primary() {
+	public @NotNull ElLocatable primary() {
 		return null;
 	}
 
@@ -54,7 +54,7 @@ public class CodedOperationDiagnostic<T> implements Diagnostic {
 	}
 
 	@Override
-	public @NotNull List<Locatable> secondary() {
+	public @NotNull List<ElLocatable> secondary() {
 		return null;
 	}
 

@@ -1,10 +1,10 @@
 package tripleo.elijah.ci.cil;
 
 import antlr.Token;
+import tripleo.elijah_fluffy.diagnostic.ElLocatable;
 import tripleo.elijah_fluffy.util.UnintendedUseException;
 import tripleo.elijah.ci.CiExpressionList;
 import tripleo.elijah.ci.CiListExpression;
-import tripleo.elijah_fluffy.diagnostic.Locatable;
 
 
 import java.io.File;
@@ -14,7 +14,7 @@ import java.util.List;
 /*
  * Created on Sep 1, 2005 8:28:55 PM
  */
-public class CiListExpressionImpl extends CiAbstractExpression implements CiListExpression, Locatable {
+public class CiListExpressionImpl extends CiAbstractExpression implements CiListExpression, ElLocatable {
 	public SyntaxImpl syntax = new SyntaxImpl();
 
 	CiExpressionList contents;

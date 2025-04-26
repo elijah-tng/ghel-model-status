@@ -17,8 +17,8 @@ import tripleo.elijah_elevateder.stages.deduce.ClassInvocation;
 import tripleo.elijah_elevateder.stages.deduce.DeducePhase;
 import tripleo.elijah_elevateder.stages.gen_fn.GenerateFunctions;
 import tripleo.elijah_elevateder.stages.gen_fn.WlGenerateClass;
-import tripleo.elijah_fluffy.diagnostic.Diagnostic;
-import tripleo.elijah_fluffy.diagnostic.Locatable;
+import tripleo.elijah_fluffy.diagnostic.ElDiagnostic;
+import tripleo.elijah_fluffy.diagnostic.ElLocatable;
 import tripleo.elijah_fluffy.util.NotImplementedException;
 
 import java.io.*;
@@ -27,7 +27,7 @@ import java.util.*;
 /**
  * Created 3/5/22 4:55 PM
  */
-public class CouldntGenerateClass implements Diagnostic {
+public class CouldntGenerateClass implements ElDiagnostic {
 	private final ClassDefinition   classDefinition;
 	private final GClassInvocation   classInvocation;
 	private final GGenerateFunctions generateFunctions;
@@ -84,7 +84,7 @@ public class CouldntGenerateClass implements Diagnostic {
 	}
 
 	@Override
-	public @NotNull Locatable primary() {
+	public @NotNull ElLocatable primary() {
 		return null;
 	}
 
@@ -94,7 +94,7 @@ public class CouldntGenerateClass implements Diagnostic {
 	}
 
 	@Override
-	public @NotNull List<Locatable> secondary() {
+	public @NotNull List<ElLocatable> secondary() {
 		return null;
 	}
 

@@ -12,7 +12,7 @@ package tripleo.elijah_elevateder.stages.deduce;
 import org.jdeferred2.DoneCallback;
 import org.jdeferred2.FailCallback;
 import org.jetbrains.annotations.*;
-import tripleo.elijah_fluffy.diagnostic.Diagnostic;
+import tripleo.elijah_fluffy.diagnostic.ElDiagnostic;
 import tripleo.elijah.lang.i.*;
 import tripleo.elijah_elevated_durable.lang_impl.ContextImpl;
 import tripleo.elijah_elevated_durable.lang_impl.VariableStatementImpl;
@@ -288,7 +288,7 @@ public class DeducePath {
 	}
 
 	public void getElementPromise(int aIndex, DoneCallback<OS_Element> aOS_elementDoneCallback,
-			FailCallback<Diagnostic> aDiagnosticFailCallback) {
+			FailCallback<ElDiagnostic> aDiagnosticFailCallback) {
 		getEntry(aIndex).elementPromise(aOS_elementDoneCallback, aDiagnosticFailCallback);
 	}
 

@@ -1,20 +1,20 @@
 package tripleo.elijah.comp.graph.i;
 
 import tripleo.elijah.comp.i.*;
-import tripleo.elijah_fluffy.diagnostic.Diagnostic;
+import tripleo.elijah_fluffy.diagnostic.ElDiagnostic;
 import tripleo.elijah_fluffy.util.*;
 
 import java.util.*;
 
 public abstract class CK_AbstractStepsContext implements CK_StepsContext {
-	private final List<CB_OutputString> lo = new ArrayList<>();
-	private final     List<Diagnostic>  ld = new ArrayList<>();
+	private final List<CB_OutputString>  lo = new ArrayList<>();
+	private final     List<ElDiagnostic> ld = new ArrayList<>();
 
 	@Override public void addOutputString(final CB_OutputString os) {
 		lo.add(os);
 	}
 
-	@Override public void addDiagnostic(final Diagnostic d) {
+	@Override public void addDiagnostic(final ElDiagnostic d) {
 
 	}
 

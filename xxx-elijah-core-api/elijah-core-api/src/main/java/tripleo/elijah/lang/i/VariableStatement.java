@@ -2,9 +2,9 @@ package tripleo.elijah.lang.i;
 
 import org.jetbrains.annotations.*;
 import tripleo.elijah.lang2.*;
-import tripleo.elijah_fluffy.diagnostic.Locatable;
+import tripleo.elijah_fluffy.diagnostic.ElLocatable;
 
-public interface VariableStatement extends @NotNull Locatable, OS_Element {
+public interface VariableStatement extends @NotNull ElLocatable, OS_Element {
 	@Override
 	Context getContext();
 

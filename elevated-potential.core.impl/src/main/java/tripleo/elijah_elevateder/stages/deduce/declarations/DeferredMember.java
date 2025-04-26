@@ -17,7 +17,7 @@ import tripleo.elijah_elevateder.stages.deduce.DeduceElementWrapper;
 import tripleo.elijah_elevateder.stages.deduce.IInvocation;
 import tripleo.elijah_elevateder.stages.gen_fn.EvaNode;
 import tripleo.elijah_elevateder.stages.gen_fn.GenType;
-import tripleo.elijah_fluffy.diagnostic.Diagnostic;
+import tripleo.elijah_fluffy.diagnostic.ElDiagnostic;
 
 /**
  * Created 6/27/21 1:41 AM
@@ -29,12 +29,12 @@ public class DeferredMember {
 			return new DeferredObject<EvaNode, Void, Void>();
 		}
 
-		public DeferredObject<GenType, Diagnostic, Void> new_DeferredObject__GenType() {
-			return new DeferredObject<GenType, Diagnostic, Void>();
+		public DeferredObject<GenType, ElDiagnostic, Void> new_DeferredObject__GenType() {
+			return new DeferredObject<GenType, ElDiagnostic, Void>();
 		}
 	}
 
-	private final DeferredObject<GenType, Diagnostic, Void> typePromise = new DeferredObject<>();
+	private final DeferredObject<GenType, ElDiagnostic, Void> typePromise = new DeferredObject<>();
 
 	private final DeferredObject<EvaNode, Void, Void> externalRef = new DeferredObject<>();
 	@Getter
@@ -71,12 +71,12 @@ public class DeferredMember {
 		return "DeferredMember{" + "parent=" + parent + ", variableName=" + variableStatement.getName() + '}';
 	}
 
-	public @NotNull Promise<GenType, Diagnostic, Void> typePromise() {
+	public @NotNull Promise<GenType, ElDiagnostic, Void> typePromise() {
 		return typePromise;
 	}
 
 	// for DeducePhase
-	public @NotNull DeferredObject<GenType, Diagnostic, Void> typeResolved() {
+	public @NotNull DeferredObject<GenType, ElDiagnostic, Void> typeResolved() {
 		return typePromise;
 	}
 

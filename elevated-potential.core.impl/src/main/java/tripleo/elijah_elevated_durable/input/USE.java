@@ -58,7 +58,7 @@ public class USE {
 		logProgress(CompProgress.USE__parseElijjahFile, f.getAbsolutePath());
 
 		if (!f.exists()) {
-			final Diagnostic e = new FileNotFoundDiagnostic(f.wrapped()); // eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+			final ElDiagnostic e = new FileNotFoundDiagnostic(f.wrapped()); // eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 
 			return Operation2.failure(e);
 		}

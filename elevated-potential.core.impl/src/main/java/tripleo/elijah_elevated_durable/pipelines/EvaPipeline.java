@@ -19,7 +19,7 @@ import tripleo.elijah_elevateder.comp.internal.Provenance;
 import tripleo.elijah_elevated.comp.backbone.CompilationEnclosure;
 import tripleo.elijah_elevateder.comp.notation.GN_GenerateNodesIntoSink;
 import tripleo.elijah_elevateder.comp.notation.GN_GenerateNodesIntoSinkEnv;
-import tripleo.elijah_fluffy.diagnostic.Diagnostic;
+import tripleo.elijah_fluffy.diagnostic.ElDiagnostic;
 import tripleo.elijah.g.GPipelineAccess;
 import tripleo.elijah.lang.i.FunctionDef;
 import tripleo.elijah.lang.i.OS_NamedElement;
@@ -255,7 +255,7 @@ public class EvaPipeline extends PipelineMember implements EDL_AccessBus.AB_LgcL
 			}
 
 			@Override
-			public void logProgress(final Diagnostic aDiagnostic) {
+			public void logProgress(final ElDiagnostic aDiagnostic) {
 				aOutput.logProgress(aDiagnostic);
 			}
 		};
