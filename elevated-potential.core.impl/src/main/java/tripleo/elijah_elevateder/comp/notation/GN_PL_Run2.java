@@ -4,8 +4,8 @@ import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 import tripleo.elijah.comp.notation.GN_Env;
 import tripleo.elijah.comp.notation.GN_Notable;
-import tripleo.elijah_fluffy.util.Eventual;
-import tripleo.elijah_fluffy.util.EventualRegister;
+import tripleo.elijah_elevated_durable.comp_process._AbstractEventualRegister;
+import tripleo.elijah_fluffy.util.*;
 import tripleo.elijah_elevated_durable.pipelines.PipelineLogic;
 import tripleo.elijah_elevated.comp.backbone.CompilationEnclosure;
 import tripleo.elijah_elevateder.factory.NonOpinionatedBuilder;
@@ -21,7 +21,7 @@ import tripleo.elijah_elevated_durable.world_impl.DefaultWorldModule;
 import java.util.Objects;
 import java.util.function.Consumer;
 
-public class GN_PL_Run2 implements GN_Notable, EventualRegister {
+public class GN_PL_Run2 extends _AbstractEventualRegister implements GN_Notable {
 	private final NonOpinionatedBuilder __nob;
 
 	private final @NotNull WorldModule          mod;
@@ -56,16 +56,6 @@ public class GN_PL_Run2 implements GN_Notable, EventualRegister {
 	}
 
 	@Override
-	public void checkFinishEventuals() {
-
-	}
-
-	@Override
-	public <P> void register(final Eventual<P> e) {
-
-	}
-
-	@Override
 	public void run() {
 		final DefaultWorldModule worldModule = (DefaultWorldModule) mod;
 		final GenerateFunctionsRequest rq = new GenerateFunctionsRequest(dcg, worldModule);
@@ -97,6 +87,16 @@ public class GN_PL_Run2 implements GN_Notable, EventualRegister {
 		throw new IllegalStateException("Need better env");
 	}
 
+	@Override
+	public @NotNull String _host() {
+		return getClass().getName();
+	}
+
+	@Override
+	public Operation<Ok> maybeCheckFinishEventuals() {
+		checkFinishEventuals();
+		return Operation.success(Ok.instance());
+	}
 
 	public record GenerateFunctionsRequest(IClassGenerator classGenerator, DefaultWorldModule worldModule) {
 		public ModuleThing mt() {
