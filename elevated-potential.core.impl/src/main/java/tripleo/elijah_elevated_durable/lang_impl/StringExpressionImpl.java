@@ -8,7 +8,7 @@
  */
 package tripleo.elijah_elevated_durable.lang_impl;
 
-import antlr.*;
+import tripleo.vendor.antlr277.*;
 import org.jetbrains.annotations.*;
 import tripleo.elijah.lang.i.*;
 import tripleo.elijah_fluffy.util.Helpers;

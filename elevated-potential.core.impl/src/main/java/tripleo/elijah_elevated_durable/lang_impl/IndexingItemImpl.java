@@ -11,7 +11,7 @@
  */
 package tripleo.elijah_elevated_durable.lang_impl;
 
-import antlr.Token;
+import tripleo.vendor.antlr277.Token;
 import tripleo.elijah.lang.i.ExpressionList;
 
 /**

@@ -8,7 +8,7 @@
  */
 package tripleo.elijah_elevated_durable.lang_impl;
 
-import antlr.Token;
+import tripleo.vendor.antlr277.Token;
 import tripleo.elijah_fluffy.util.UnintendedUseException;
 import tripleo.elijah.lang.i.DotExpression;
 import tripleo.elijah.lang.i.ExpressionKind;

@@ -2,8 +2,8 @@
 
 package tripleo.elijah_elevated_durable.parser.antlr2;
 
-import antlr.*;
-import antlr.collections.impl.BitSet;
+import tripleo.vendor.antlr277.*;
+import tripleo.vendor.antlr277.collections.impl.BitSet;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import tripleo.elijah.ci.CiExpression;
@@ -23,9 +23,9 @@ import tripleo.elijah.ci.cii.QualidentList;
 import tripleo.elijah.ci.cii.TypeCastExpression;
 import tripleo.elijah.ci.cii.TypeName;
 import tripleo.elijah_elevated_durable.parser.PCon;
-import tripleo.elijah.xlang.LocatableString;
+import tripleo.elijah_fluffy.xlang.LocatableString;
 
-public class EzParser extends antlr.LLkParser implements EzTokenTypes {
+public class EzParser extends tripleo.vendor.antlr277.LLkParser implements EzTokenTypes {
 
 	public static final String[] _tokenNames = { "<0>", "EOF", "<2>", "NULL_TREE_LOOKAHEAD", "\"program\"",
 			"\"library\"", "\"shared\"", "IDENT", "\"end\"", "\"lib\"", "\"libraries\"", "TOK_COLON", "STRING_LITERAL",

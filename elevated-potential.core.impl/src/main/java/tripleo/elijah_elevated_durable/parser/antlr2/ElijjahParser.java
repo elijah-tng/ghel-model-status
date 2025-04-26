@@ -2,8 +2,8 @@
 
 package tripleo.elijah_elevated_durable.parser.antlr2;
 
-import antlr.*;
-import antlr.collections.impl.BitSet;
+import tripleo.vendor.antlr277.*;
+import tripleo.vendor.antlr277.collections.impl.BitSet;
 import org.jetbrains.annotations.Nullable;
 import tripleo.elijah.contexts.*;
 import tripleo.elijah.lang.i.*;
@@ -19,7 +19,7 @@ import tripleo.elijah_elevateder.lang.imports.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ElijjahParser extends antlr.LLkParser implements ElijjahTokenTypes {
+public class ElijjahParser extends tripleo.vendor.antlr277.LLkParser implements ElijjahTokenTypes {
 
 	public static final String[] _tokenNames = { "<0>", "EOF", "<2>", "NULL_TREE_LOOKAHEAD", "\"as\"", "\"cast_to\"",
 			"\"package\"", "\"indexing\"", "IDENT", "TOK_COLON", "STRING_LITERAL", "CHAR_LITERAL", "NUM_INT",

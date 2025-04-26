@@ -8,7 +8,7 @@
  */
 package tripleo.elijah_elevated_durable.lang_impl;
 
-import antlr.Token;
+import tripleo.vendor.antlr277.Token;
 import org.jetbrains.annotations.*;
 import tripleo.elijah.lang.i.*;
 import tripleo.elijah.lang.nextgen.names.i.EN_Name;
