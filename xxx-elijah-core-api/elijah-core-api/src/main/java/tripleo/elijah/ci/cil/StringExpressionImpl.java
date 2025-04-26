@@ -8,7 +8,7 @@
  */
 package tripleo.elijah.ci.cil;
 
-import antlr.Token;
+import tripleo.vendor.antlr277.Token;
 import tripleo.elijah.ci.CiExpression;
 import tripleo.elijah.ci.ExpressionKind;
 import tripleo.elijah.ci.cii.StringExpression;

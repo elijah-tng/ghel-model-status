@@ -9,7 +9,7 @@
  */
 package tripleo.elijah.ci;
 
-import antlr.Token;
+import tripleo.vendor.antlr277.Token;
 
 public interface GenerateStatement {
 	void addDirective(Token token, CiExpression expression);

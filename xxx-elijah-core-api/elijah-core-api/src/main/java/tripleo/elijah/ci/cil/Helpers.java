@@ -1,7 +1,7 @@
 package tripleo.elijah.ci.cil;
 
-import antlr.CommonToken;
-import antlr.Token;
+import tripleo.vendor.antlr277.CommonToken;
+import tripleo.vendor.antlr277.Token;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;

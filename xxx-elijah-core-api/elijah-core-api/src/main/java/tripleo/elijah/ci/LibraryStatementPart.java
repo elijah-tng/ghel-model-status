@@ -9,9 +9,9 @@
  */
 package tripleo.elijah.ci;
 
-//import antlr.Token;
+//import tripleo.vendor.antlr277.Token;
 
-import antlr.Token;
+import tripleo.vendor.antlr277.Token;
 
 public interface LibraryStatementPart {
 	void addDirective(Token token, CiExpression iExpression);

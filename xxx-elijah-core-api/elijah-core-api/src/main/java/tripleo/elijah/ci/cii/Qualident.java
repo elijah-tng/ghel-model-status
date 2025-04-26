@@ -1,6 +1,6 @@
 package tripleo.elijah.ci.cii;
 
-import antlr.Token;
+import tripleo.vendor.antlr277.Token;
 import org.jetbrains.annotations.NotNull;
 import tripleo.elijah.ci.CiExpression;
 import tripleo.elijah.ci.ExpressionKind;
