@@ -1,12 +1,16 @@
 package tripleo.elijah_fluffy.util;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class DefaultEventualRegister implements EventualRegister {
-	final List<Eventual<?>> _eventuals = new ArrayList<Eventual<?>>();
+	private final          List<Eventual<?>> _eventuals = new ArrayList<>();
+	private final @NotNull String            host;
 
-	public DefaultEventualRegister() {
+	public DefaultEventualRegister(final @NotNull String aHostString) {
+		this.host = aHostString;
 	}
 
 	@Override
@@ -16,12 +20,21 @@ public class DefaultEventualRegister implements EventualRegister {
 
 	@Override
 	public void checkFinishEventuals() {
-		int y = 0;
 		for (Eventual<?> eventual : _eventuals) {
 			if (eventual.isResolved()) {
 			} else {
-				System.err.println("[PipelineLogic::checkEventual] failed for " + eventual.description());
+				System.err.println("[" + _host() + "] failed for " + eventual.description());
 			}
 		}
+	}
+
+	@Override
+	public @NotNull String _host() {
+		return this.host;
+	}
+
+	@Override
+	public Operation<Ok> maybeCheckFinishEventuals() {
+		return null;
 	}
 }
