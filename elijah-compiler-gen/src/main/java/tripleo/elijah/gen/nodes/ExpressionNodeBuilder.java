@@ -13,8 +13,8 @@
  */
 package tripleo.elijah.gen.nodes;
 
-import antlr.CommonToken;
-import antlr.Token;
+import tripleo.vendor.antlr277.CommonToken;
+import tripleo.vendor.antlr277.Token;
 import com.google.common.base.Function;
 import com.google.common.collect.Collections2;
 import org.checkerframework.checker.nullness.qual.Nullable;
