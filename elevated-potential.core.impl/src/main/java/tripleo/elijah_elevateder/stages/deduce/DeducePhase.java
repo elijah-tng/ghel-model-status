@@ -86,7 +86,7 @@ public class DeducePhase extends _RegistrationTarget implements ReactiveDimensio
 	private final @NotNull DRS                                          drs                     = _inj().new_DRS();
 	private final @NotNull WAITS            waits                   = _inj().new_WAITS();
 	public                 IPipelineAccess  pa;
-	private                EventualRegister der = new DefaultEventualRegister();
+	private                EventualRegister der = new DefaultEventualRegister("DeducePhase::checkEventuals");
 
 	public DeducePhase(final @NotNull CompilationEnclosure ace) {
 		this(ace.getCompilationAccess(), ace.getPipelineAccess(), ace.getPipelineLogic());
@@ -758,6 +758,16 @@ public class DeducePhase extends _RegistrationTarget implements ReactiveDimensio
 	@Override
 	public void checkFinishEventuals() {
 		der.checkFinishEventuals();
+	}
+
+	@Override
+	public @NotNull String _host() {
+		return der._host();
+	}
+
+	@Override
+	public Operation<Ok> maybeCheckFinishEventuals() {
+		return der.maybeCheckFinishEventuals();
 	}
 
 	@Override
