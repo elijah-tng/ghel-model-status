@@ -40,7 +40,7 @@ public class CY_HashDeferredAction implements DeferredAction<String> {
 
     @Override
     public void calculate() {
-        if (completed() || e._prom_isRejected()) return; // README only once, no retry
+        if (completed() || e.isRejected()) return; // README only once, no retry
 
         final DigestUtils           digestUtils   = new DigestUtils(SHA_256);
         final StringBuilder             sb1           = new StringBuilder();
