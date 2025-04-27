@@ -9,6 +9,7 @@ import tripleo.elijah_elevateder.lang.types.OS_FuncTypeImpl;
 import tripleo.elijah_elevateder.stages.gen_fn.*;
 import tripleo.elijah_elevateder.stages.gen_fn.IdentTableEntry.ITE_Resolver_Result;
 import tripleo.elijah_elevateder.stages.instructions.*;
+import tripleo.elijah_fluffy.diagnostic.ElDiagnostic;
 import tripleo.elijah_fluffy.util.*;
 
 import java.util.List;
@@ -618,7 +619,7 @@ class Unnamed_ITE_Resolver1 implements ITE_Resolver {
 					ty2 = dt2.resolve_type(aTy, aTy.getTypeName().getContext());
 					return Operation.success(ty2);
 				} catch (ResolveError aE) {
-					return Operation.failure(aE);
+					return Operation.failure((ElDiagnostic) aE);
 				}
 			}
 

@@ -968,7 +968,7 @@ public class DeduceTypes2 implements GDeduceTypes2 {
 							// TODO transition to GenType
 							clsinv.set(i, gp.get(i), typeName2.getResolved());
 						} catch (ResolveError aResolveError) {
-							return Operation.failure(aResolveError);
+							return Operation.failure((ElDiagnostic) aResolveError);
 						}
 					}
 				}

@@ -6,6 +6,7 @@ import tripleo.elijah.comp.graph.i.Asseverate;
 import tripleo.elijah.comp.i.CompilationClosure;
 import tripleo.elijah.comp.i.ErrSink;
 import tripleo.elijah.comp.queries.QSEZ_Reasoning;
+import tripleo.elijah_fluffy.diagnostic.Diagnostic_9995;
 import tripleo.elijah_fluffy.diagnostic.ExceptionDiagnostic;
 import tripleo.elijah_fluffy.util.Operation2;
 import tripleo.elijah_elevateder.comp.i.Compilation;
@@ -42,7 +43,7 @@ public class CW_ezDirRequest {
 					c.getObjectTree().asseverate(ezFile, Asseverate.EZ_PARSED);
 					c.reports().addInput(() -> file_name, EZ_FILE);
 				} else {
-					R.add(Operation2.failure(new QuerySearchEzFiles.Diagnostic_9995(file)));
+					R.add(Operation2.failure(new Diagnostic_9995(file.wrapped())));
 					errSink.reportError("9995 ezFile is null " + file); // TODO Diagnostic
 				}
 			} catch (final Exception e) {

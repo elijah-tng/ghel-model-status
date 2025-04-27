@@ -20,6 +20,7 @@ import tripleo.elijah_elevateder.stages.garish.GarishClass_Generator;
 import tripleo.elijah_elevateder.stages.gen_generic.*;
 import tripleo.elijah_elevateder.util.Helpers0;
 import tripleo.elijah_elevateder.world.i.LivingClass;
+import tripleo.elijah_fluffy.diagnostic.ElDiagnostic;
 import tripleo.elijah_fluffy.util.*;
 
 import java.util.*;
@@ -114,7 +115,7 @@ public class EvaClass extends EvaContainerNC implements GNCoded, GEvaClass {
 
 								potentialTypes = Helpers.List_of(rt);
 							} catch (ResolveError aE) {
-								return Operation.failure(aE);
+								return Operation.failure((ElDiagnostic) aE);
 							}
 						} else if (potentialTypes.get(0).getResolved() instanceof OS_BuiltinType
 								&& potentialTypes.get(1).getResolved() instanceof OS_UserClassType) {
@@ -123,11 +124,11 @@ public class EvaClass extends EvaContainerNC implements GNCoded, GEvaClass {
 							try {
 								@NotNull
 								final GenType rt = aDeduceTypes2.resolve_type(resolved, resolvedClass2.getContext());
-								int y = 2;
+								int y=2;
 
 								potentialTypes = Helpers.List_of(rt);
 							} catch (ResolveError aE) {
-								return Operation.failure(aE);
+								return Operation.failure((ElDiagnostic) aE);
 							}
 						} else {
 
@@ -170,7 +171,7 @@ public class EvaClass extends EvaContainerNC implements GNCoded, GEvaClass {
 									} catch (ResolveError aResolveError) {
 										aResolveError.printStackTrace();
 										// assert false;
-										return Operation.failure(aResolveError);
+										return Operation.failure((ElDiagnostic) aResolveError);
 									}
 								}
 							}
@@ -221,7 +222,7 @@ public class EvaClass extends EvaContainerNC implements GNCoded, GEvaClass {
 							potentialTypes.add(genType);
 						} catch (ResolveError aResolveError) {
 							aResolveError.printStackTrace();
-							return Operation.failure(aResolveError);
+							return Operation.failure((ElDiagnostic) aResolveError);
 						}
 					}
 					//
