@@ -25,12 +25,6 @@
 
 		<maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
 
-		<!--
-		<kotlin.version>1.9.22</kotlin.version>
-
-		<org.eclipse.xtend.lib.version>2.31.0.M3</org.eclipse.xtend.lib.version>
-		<xtend-maven-plugin.version>2.31.0.M3</xtend-maven-plugin.version>
-		-->
 	</properties>
 
 	<modules>
@@ -39,6 +33,7 @@
 		<module>./elevated-potential.core.impl</module>
 		<module>./xxx-elijah-core-api</module>
 -->
+		<module>./tripleo-small</module>
 		<module>./xxx-model-status</module>
 	</modules>
 
@@ -50,27 +45,32 @@
 			<version>3.5.3</version>
 		</dependency>
 
-		<!-- https://smallrye.io/smallrye-mutiny/2.5.1/tutorials/getting-mutiny/ -->
+<!--
 		<dependency>
 			<groupId>io.smallrye.reactive</groupId>
 			<artifactId>mutiny</artifactId>
 			<version>2.8.0</version>
 		</dependency>
+-->
 
 
+<!--
 		<dependency>
 			<groupId>org.clojure</groupId>
 			<artifactId>clojure</artifactId>
 			<version>1.12.0</version>
 		</dependency>
+-->
 
 
+<!--
 		<dependency>
 			<groupId>org.mockito</groupId>
 			<artifactId>mockito-core</artifactId>
 			<version>5.17.0</version>
 			<scope>test</scope>
 		</dependency>
+-->
 
 		<!--
 				<dependency>
@@ -84,19 +84,9 @@
 			<groupId>com.gitlab.tripleo1</groupId>
 			<artifactId>buffers</artifactId>
 			<version>3038ff102c</version>
-			<!--
-						<groupId>tripleo.buffers</groupId>
-						<artifactId>buffers-v1</artifactId>
-						<version>0.0.3</version>
-			-->
 		</dependency>
 
 		<dependency>
-			<!--
-						<groupId>tripleo.util.range</groupId>
-						<artifactId>range-v1</artifactId>
-						<version>${range.version}</version>
-			-->
 			<groupId>com.gitlab.Tripleo</groupId>
 			<artifactId>range</artifactId>
 			<version>0.0.3b</version>
@@ -172,25 +162,22 @@
 		</dependency>
 -->
 
-		<!-- https://search.maven.org/artifact/io.reactivex.rxjava3/rxjava/3.1.0/jar -->
 		<dependency>
 			<groupId>io.reactivex.rxjava3</groupId>
 			<artifactId>rxjava</artifactId>
 			<version>3.1.10</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.reactivestreams/reactive-streams -->
 		<dependency>
 			<groupId>org.reactivestreams</groupId>
 			<artifactId>reactive-streams</artifactId>
 			<version>1.0.4</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
 		<dependency>
 			<groupId>commons-codec</groupId>
 			<artifactId>commons-codec</artifactId>
-			<version>1.18.0</version> <!-- Use 1.6 for java 1.5 -->
+			<version>1.18.0</version>
 		</dependency>
 
 		<dependency>
@@ -249,10 +236,6 @@
 	</dependencies>
 
 	<repositories>
-		<repository>
-			<id>central</id>
-			<url>https://repo1.maven.org/maven2/</url>
-		</repository>
 		<repository>
 			<id>jitpack.io</id>
 			<url>https://jitpack.io</url>
@@ -359,6 +342,7 @@
 -->
 
 
+<!--
 	<reporting>
 		<plugins>
 			<plugin>
@@ -368,4 +352,5 @@
 			</plugin>
 		</plugins>
 	</reporting>
+-->
 </project>
