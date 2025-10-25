@@ -13,4 +13,6 @@ Revised Goals
 - ...
 
 
- https://gitlab.com/elijah-team/documentation/petal-to-the-medal/-/blob/main/ginitiatives/G7.md
+https://gitlab.com/elijah-team/documentation/petal-to-the-medal/-/blob/main/ginitiatives/G7.md
+
+https://gitlab.com/elijah-team/api-components/model-status
