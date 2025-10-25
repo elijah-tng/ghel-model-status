@@ -16,3 +16,4 @@
 
 /.lsp/.cache/
 /.clj-kondo/
+/.idea/compiler.xml
