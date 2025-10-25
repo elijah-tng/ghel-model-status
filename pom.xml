@@ -1,49 +1,45 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+	<packaging>pom</packaging>
 
 	<groupId>tripleo.elijah</groupId>
-	<artifactId>elevated-potential</artifactId>
-	<packaging>pom</packaging>
+	<artifactId>ghel-model-status</artifactId>
 	<version>2024.elevated-potential.2</version>
-	<name>elevated-potential</name>
-	<url>http://github.com/elijah-lang/elevated-potential</url>
+	<name>model-status: elevated-potential</name>
+
+	<url>http://github.com/elijah-tng/elevated-potential</url>
 
 	<properties>
 		<project.build.outputTimestamp>1</project.build.outputTimestamp>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
 		<java.version>17</java.version>
 		<maven.compiler.source>17</maven.compiler.source>
 		<maven.compiler.target>17</maven.compiler.target>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
 		<downloadSources>true</downloadSources>
 
 		<jacoco.version>0.8.9</jacoco.version>
 		<guava.version>33.3.1-jre</guava.version>
 
-		<!--
-		<buffers.version>0.0.3</buffers.version>
-		<range.version>0.0.3b</range.version>
--->
-
 		<maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
-
-		<jdeferred.version>2.0.0</jdeferred.version>
 
 		<!--
 		<kotlin.version>1.9.22</kotlin.version>
 
 		<org.eclipse.xtend.lib.version>2.31.0.M3</org.eclipse.xtend.lib.version>
 		<xtend-maven-plugin.version>2.31.0.M3</xtend-maven-plugin.version>
--->
+		-->
 	</properties>
 
 	<modules>
-		<module>./elevated-potential.base.impl</module>
+<!--
 		<module>./elevated-potential.core.api</module>
 		<module>./elevated-potential.core.impl</module>
 		<module>./xxx-elijah-core-api</module>
+-->
+		<module>./xxx-model-status</module>
 	</modules>
 
 	<dependencies>
