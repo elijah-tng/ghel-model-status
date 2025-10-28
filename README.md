@@ -16,3 +16,13 @@ Revised Goals
 https://gitlab.com/elijah-team/documentation/petal-to-the-medal/-/blob/main/ginitiatives/G7.md
 
 https://gitlab.com/elijah-team/api-components/model-status
+
+
+Blah
+-----
+
+- `elevated` implementation looks safe to remove
+
+- keeping `xxx-model-status` until integration is complete (wrong name)
+
+- gradle and clojure builds, also [kobalt](https://github.com/cbeust/kobalt)
