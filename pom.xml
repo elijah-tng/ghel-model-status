@@ -32,7 +32,6 @@
 	</properties>
 
 	<modules>
-<!--
 		<module>./elevated-potential.core.api</module>
 		<!--
 				<module>./elevated-potential.core.impl</module>
