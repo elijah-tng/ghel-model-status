@@ -8,7 +8,10 @@
 	<version>2024.elevated-potential.2</version>
 	<name>model-status: elevated-potential</name>
 
-	<url>http://github.com/elijah-tng/elevated-potential</url>
+	<scm>
+		<url>http://github.com/elijah-tng/ghel-model-status</url>
+		<connection>git:http://github.com/elijah-tng/ghel-model-status</connection>
+	</scm>
 
 	<properties>
 		<project.build.outputTimestamp>1</project.build.outputTimestamp>
