@@ -327,6 +327,22 @@
 					<release>17</release>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<!--...-->
+				<configuration>
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+							<!--<mainClass>tripleo.elijah.Main</mainClass>-->
+							<!--<classpathPrefix>lib/</classpathPrefix>-->
+							<!--<classpathLayoutType>repository</classpathLayoutType>-->
+						</manifest>
+					</archive>
+				</configuration>
+				<!--...-->
+			</plugin>
 		</plugins>
 	</build>
 
