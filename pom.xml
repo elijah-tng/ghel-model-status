@@ -9,9 +9,11 @@
 	<version>2024.elevated-potential.2</version>
 	<name>model-status: elevated-potential</name>
 
+	<url>https://github.com/elijah-tng/ghel-model-status</url>
+
 	<scm>
-		<url>http://github.com/elijah-tng/ghel-model-status</url>
-		<connection>git:http://github.com/elijah-tng/ghel-model-status</connection>
+		<url>https://github.com/elijah-tng/ghel-model-status</url>
+		<connection>scm:git:https://github.com/elijah-tng/ghel-model-status</connection>
 	</scm>
 
 	<properties>
