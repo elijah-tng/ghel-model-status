@@ -1,5 +1,6 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>tripleo.elijah</groupId>
@@ -9,8 +10,16 @@
 	<name>elevated-potential</name>
 	<url>http://github.com/elijah-lang/elevated-potential</url>
 
+	<modules>
+		<module>./xxx-elijah-core-api</module>
+		<module>./elevated-potential.base.impl</module>
+		<module>./elevated-potential.core.api</module>
+		<module>./elevated-potential.core.impl</module>
+		<module>./elevated-potential.core.test</module>
+	</modules>
+
 	<properties>
-		<project.build.outputTimestamp>1</project.build.outputTimestamp>
+		<!--<project.build.outputTimestamp>1</project.build.outputTimestamp>-->
 
 		<java.version>17</java.version>
 		<maven.compiler.source>17</maven.compiler.source>
@@ -19,13 +28,8 @@
 
 		<downloadSources>true</downloadSources>
 
-		<jacoco.version>0.8.9</jacoco.version>
+		<!--<jacoco.version>0.8.9</jacoco.version>-->
 		<guava.version>33.3.1-jre</guava.version>
-
-		<!--
-		<buffers.version>0.0.3</buffers.version>
-		<range.version>0.0.3b</range.version>
--->
 
 		<maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
 
@@ -36,120 +40,100 @@
 
 		<org.eclipse.xtend.lib.version>2.31.0.M3</org.eclipse.xtend.lib.version>
 		<xtend-maven-plugin.version>2.31.0.M3</xtend-maven-plugin.version>
--->
+		-->
 	</properties>
-
-	<modules>
-		<module>./elevated-potential.base.impl</module>
-		<module>./elevated-potential.core.api</module>
-		<module>./elevated-potential.core.impl</module>
-		<module>./xxx-elijah-core-api</module>
-	</modules>
 
 	<dependencies>
 
+		<!--
 		<dependency>
 			<groupId>org.antlr</groupId>
 			<artifactId>antlr-runtime</artifactId>
 			<version>3.5.3</version>
 		</dependency>
+		-->
 
 		<!-- https://smallrye.io/smallrye-mutiny/2.5.1/tutorials/getting-mutiny/ -->
 		<dependency>
 			<groupId>io.smallrye.reactive</groupId>
 			<artifactId>mutiny</artifactId>
-			<version>2.8.0</version>
 		</dependency>
 
 
 		<dependency>
 			<groupId>org.clojure</groupId>
 			<artifactId>clojure</artifactId>
-			<version>1.12.0</version>
-		</dependency>
-
-
-		<dependency>
-			<groupId>org.mockito</groupId>
-			<artifactId>mockito-core</artifactId>
-			<version>5.17.0</version>
-			<scope>test</scope>
 		</dependency>
 
 		<!--
-				<dependency>
-					<groupId>com.github.spotbugs</groupId>
-					<artifactId>spotbugs-annotations</artifactId>
-					<version>4.7.3</version>
-				</dependency>
+		<dependency>
+			<groupId>com.github.spotbugs</groupId>
+			<artifactId>spotbugs-annotations</artifactId>
+			<version>4.7.3</version>
+		</dependency>
 		-->
 
+		<!--
 		<dependency>
 			<groupId>com.gitlab.tripleo1</groupId>
 			<artifactId>buffers</artifactId>
-			<version>3038ff102c</version>
-			<!--
-						<groupId>tripleo.buffers</groupId>
-						<artifactId>buffers-v1</artifactId>
-						<version>0.0.3</version>
-			-->
 		</dependency>
-
+		-->
+		<!--
 		<dependency>
-			<!--
-						<groupId>tripleo.util.range</groupId>
-						<artifactId>range-v1</artifactId>
-						<version>${range.version}</version>
-			-->
 			<groupId>com.gitlab.Tripleo</groupId>
 			<artifactId>range</artifactId>
-			<version>0.0.3b</version>
 		</dependency>
+		-->
+		<!--
+		<dependency>
+			<groupId>org.jdeferred.v2</groupId>
+			<artifactId>jdeferred-core</artifactId>
+			<version>2.0.0</version>
+		</dependency>
+		-->
 
 
 		<dependency>
 			<groupId>javax.annotation</groupId>
 			<artifactId>javax.annotation-api</artifactId>
-			<version>1.3.2</version>
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.jdt</groupId>
 			<artifactId>org.eclipse.jdt.annotation</artifactId>
-			<version>2.3.100</version>
 			<scope>compile</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
-			<version>3.17.0</version>
 			<scope>compile</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-simple</artifactId>
-			<version>2.1.0-alpha1</version>
+			<!--			<version>2.1.0-alpha1</version>-->
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
-			<version>2.1.0-alpha1</version>
+			<!--<version>2.1.0-alpha1</version>-->
 			<scope>compile</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>com.github.spotbugs</groupId>
 			<artifactId>spotbugs-annotations</artifactId>
-			<version>4.9.3</version>
+			<!--<version>4.9.3</version>-->
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
-			<version>${guava.version}</version>
+			<!--<version>${guava.version}</version>-->
 			<scope>compile</scope>
 		</dependency>
 
@@ -167,53 +151,45 @@
 		-->
 
 		<!-- https://mvnrepository.com/artifact/com.tngtech.archunit/archunit-junit4 -->
-<!--
+		<!--
 		<dependency>
 			<groupId>com.tngtech.archunit</groupId>
 			<artifactId>archunit-junit4</artifactId>
 			<version>1.3.0</version>
 			<scope>test</scope>
 		</dependency>
--->
+		-->
 
-		<!-- https://search.maven.org/artifact/io.reactivex.rxjava3/rxjava/3.1.0/jar -->
 		<dependency>
 			<groupId>io.reactivex.rxjava3</groupId>
 			<artifactId>rxjava</artifactId>
-			<version>3.1.10</version>
+			<!--<version>3.1.10</version>-->
 		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/org.reactivestreams/reactive-streams -->
 		<dependency>
 			<groupId>org.reactivestreams</groupId>
 			<artifactId>reactive-streams</artifactId>
-			<version>1.0.4</version>
+			<!--<version>1.0.4</version>-->
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
 		<dependency>
 			<groupId>commons-codec</groupId>
 			<artifactId>commons-codec</artifactId>
-			<version>1.18.0</version> <!-- Use 1.6 for java 1.5 -->
 		</dependency>
 
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.18.38</version>
+			<!--<version>1.18.38</version>-->
 			<scope>provided</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.jdeferred.v2</groupId>
-			<artifactId>jdeferred-core</artifactId>
-			<version>2.0.0</version>
-		</dependency>
+
 		<dependency>
 			<groupId>org.jetbrains</groupId>
 			<artifactId>annotations</artifactId>
-			<version>26.0.2</version>
+			<!--<version>26.0.2</version>-->
 			<scope>compile</scope>
 		</dependency>
+
 		<!--
 		<dependency>
 			<groupId>org.jetbrains.kotlin</groupId>
@@ -228,35 +204,227 @@
 		</dependency>
 		-->
 
+		<!--
 		<dependency>
 			<groupId>com.google.auto.service</groupId>
 			<artifactId>auto-service</artifactId>
-			<version>1.1.1</version>
 			<optional>true</optional>
 		</dependency>
+		<dependency>
+			<groupId>com.google.auto.service</groupId>
+			<artifactId>auto-service-annotations</artifactId>
+		</dependency>
+		-->
 
+		<!--
 		<dependency>
 			<groupId>org.jctools</groupId>
 			<artifactId>jctools-core</artifactId>
-			<version>4.0.5</version>
 		</dependency>
+		-->
 
-
-<!--
+		<!--
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter</artifactId>
 			<version>5.11.0</version>
 			<scope>test</scope>
 		</dependency>
--->
+		-->
+
 	</dependencies>
 
+	<dependencyManagement>
+		<dependencies>
+			<!-- https://smallrye.io/smallrye-mutiny/2.5.1/tutorials/getting-mutiny/ -->
+			<dependency>
+				<groupId>io.smallrye.reactive</groupId>
+				<artifactId>mutiny</artifactId>
+				<version>2.8.0</version>
+			</dependency>
+
+
+			<dependency>
+				<groupId>org.clojure</groupId>
+				<artifactId>clojure</artifactId>
+				<version>1.12.0</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.antlr</groupId>
+				<artifactId>antlr-runtime</artifactId>
+				<version>3.5.3</version>
+			</dependency>
+
+
+			<dependency>
+				<groupId>org.mockito</groupId>
+				<artifactId>mockito-core</artifactId>
+				<version>5.17.0</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.github.spotbugs</groupId>
+				<artifactId>spotbugs-annotations</artifactId>
+				<version>4.7.3</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.gitlab.tripleo1</groupId>
+				<artifactId>buffers</artifactId>
+				<version>3038ff102c</version>
+				<!--
+				<groupId>tripleo.buffers</groupId>
+				<artifactId>buffers-v1</artifactId>
+				<version>0.0.3</version>
+				-->
+			</dependency>
+
+			<dependency>
+				<!--
+				<groupId>tripleo.util.range</groupId>
+				<artifactId>range-v1</artifactId>
+				<version>${range.version}</version>
+				-->
+				<groupId>com.gitlab.Tripleo</groupId>
+				<artifactId>range</artifactId>
+				<version>0.0.3b</version>
+			</dependency>
+
+
+			<dependency>
+				<groupId>javax.annotation</groupId>
+				<artifactId>javax.annotation-api</artifactId>
+				<version>1.3.2</version>
+			</dependency>
+			<dependency>
+				<groupId>org.eclipse.jdt</groupId>
+				<artifactId>org.eclipse.jdt.annotation</artifactId>
+				<version>2.3.100</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<version>3.17.0</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-simple</artifactId>
+				<version>2.1.0-alpha1</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>2.1.0-alpha1</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.github.spotbugs</groupId>
+				<artifactId>spotbugs-annotations</artifactId>
+				<version>4.9.3</version>
+			</dependency>
+			<dependency>
+				<groupId>com.google.guava</groupId>
+				<artifactId>guava</artifactId>
+				<version>${guava.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.eclipse.xtend</groupId>
+				<artifactId>org.eclipse.xtend.lib</artifactId>
+				<version>${org.eclipse.xtend.lib.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.eclipse.xtend</groupId>
+				<artifactId>org.eclipse.xtend.core</artifactId>
+				<version>${org.eclipse.xtend.lib.version}</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/com.tngtech.archunit/archunit-junit4 -->
+			<dependency>
+				<groupId>com.tngtech.archunit</groupId>
+				<artifactId>archunit-junit4</artifactId>
+				<version>1.3.0</version>
+			</dependency>
+
+			<dependency>
+				<groupId>io.reactivex.rxjava3</groupId>
+				<artifactId>rxjava</artifactId>
+				<version>3.1.10</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.reactivestreams</groupId>
+				<artifactId>reactive-streams</artifactId>
+				<version>1.0.4</version>
+			</dependency>
+
+			<dependency>
+				<groupId>commons-codec</groupId>
+				<artifactId>commons-codec</artifactId>
+				<version>1.18.0</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>1.18.38</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.jdeferred.v2</groupId>
+				<artifactId>jdeferred-core</artifactId>
+				<version>2.0.0</version>
+			</dependency>
+			<dependency>
+				<groupId>org.jetbrains</groupId>
+				<artifactId>annotations</artifactId>
+				<version>26.0.2</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.jetbrains.kotlin</groupId>
+				<artifactId>kotlin-stdlib-jdk8</artifactId>
+				<version>${kotlin.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.jetbrains.kotlin</groupId>
+				<artifactId>kotlin-test-junit</artifactId>
+				<version>${kotlin.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.google.auto.service</groupId>
+				<artifactId>auto-service</artifactId>
+				<version>1.1.1</version>
+				<optional>true</optional>
+			</dependency>
+
+			<dependency>
+				<groupId>org.jctools</groupId>
+				<artifactId>jctools-core</artifactId>
+				<version>4.0.5</version>
+			</dependency>
+
+
+			<dependency>
+				<groupId>org.junit.jupiter</groupId>
+				<artifactId>junit-jupiter</artifactId>
+				<version>5.11.0</version>
+			</dependency>
+		</dependencies>
+
+	</dependencyManagement>
+
 	<repositories>
-		<repository>
-			<id>central</id>
-			<url>https://repo1.maven.org/maven2/</url>
-		</repository>
+		<!--
+				<repository>
+					<id>central</id>
+					<url>https://repo1.maven.org/maven2/</url>
+				</repository>
+		-->
 		<repository>
 			<id>jitpack.io</id>
 			<url>https://jitpack.io</url>
@@ -340,36 +508,37 @@
 		</plugins>
 	</build>
 
-	<!--
-	<reporting>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-checkstyle-plugin</artifactId>
-				<version>3.3.0</version>
-				<configuration>
+	<profiles>
+		<profile>
+			<id>reporting</id>
+			<reporting>
+				<plugins>
+					<!--
+					<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-checkstyle-plugin</artifactId>
+					<version>3.3.0</version>
+					<configuration>
 					<configLocation>checkstyle.xml</configLocation>
-				</configuration>
-				<reportSets>
+					</configuration>
+					<reportSets>
 					<reportSet>
-						<reports>
-							<report>checkstyle</report>
-						</reports>
+					<reports>
+					<report>checkstyle</report>
+					</reports>
 					</reportSet>
-				</reportSets>
-			</plugin>
-		</plugins>
-	</reporting>
--->
-
-
-	<reporting>
-		<plugins>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>jdepend-maven-plugin</artifactId>
-				<version>2.1</version>
-			</plugin>
-		</plugins>
-	</reporting>
+					</reportSets>
+					</plugin>
+					-->
+					<!--
+					<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>jdepend-maven-plugin</artifactId>
+					<version>2.1</version>
+					</plugin>
+					-->
+				</plugins>
+			</reporting>
+		</profile>
+	</profiles>
 </project>

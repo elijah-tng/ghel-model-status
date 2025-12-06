@@ -25,20 +25,19 @@ Instructions
 [https://github.com/elijah-team/elevated-potential](https://github.com/elijah-team/elevated-potential)
 
 ```shell
-git clone https://github.com/elijah-team/elevated-potential -b rolling
+git clone https://github.com/elijah-team/elevated-potential
 cd elevated-potential
-sdk install mvnd
-mvnd clean test
-# or 
-nix-shell -p maven gradle jdk17 --pure --command "mvn clean test"
+git switch rolling
 ```
 
-### Gitpod
+```shell
+mvnd clean test
+```
 
-https://gitpod.io/#https://github.com/elijah-team/elevated-potential
+\-or-
 
 ```shell
-mvn compile
+./mvnw clean test"
 ```
 
 See: https://gitlab.com/elijah-team/crft-elevated-potential.git
@@ -64,6 +63,8 @@ Lineage
 --------
 
 - `almost`
+
+- prob `congenial`
 
 - ??
 
