@@ -19,6 +19,11 @@
         <module name="elevated-potential-core-impl" />
         <module name="elevated-potential-core-api0" />
       </profile>
+      <profile name="Annotation profile for elevated-potential" enabled="true">
+        <sourceOutputDir name="../generated-sources/annotations" />
+        <sourceTestOutputDir name="../generated-test-sources/test-annotations" />
+        <module name="elevated-potential.core.test" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="17" />
   </component>
