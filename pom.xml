@@ -31,7 +31,7 @@
 		<!--<jacoco.version>0.8.9</jacoco.version>-->
 		<guava.version>33.3.1-jre</guava.version>
 		<maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
-		<org.eclipse.xtend.lib.version>33</org.eclipse.xtend.lib.version>
+		<org.eclipse.xtend.lib.version>2.41.0</org.eclipse.xtend.lib.version>
 		<org.eclipse.xtend.core.version>2.41.0</org.eclipse.xtend.core.version>
 	</properties>
 
