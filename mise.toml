@@ -1,2 +1,4 @@
 [tools]
+gh = "latest"
+maven = "latest"
 mvnd = "latest"
