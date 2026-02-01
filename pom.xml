@@ -31,8 +31,8 @@
 		<!--<jacoco.version>0.8.9</jacoco.version>-->
 		<guava.version>33.3.1-jre</guava.version>
 		<maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
-		<org.eclipse.xtend.lib.version>2.41.0</org.eclipse.xtend.lib.version>
-		<org.eclipse.xtend.core.version>2.41.0</org.eclipse.xtend.core.version>
+		<org.eclipse.xtext.lib.version>2.41.0</org.eclipse.xtext.lib.version>
+		<org.eclipse.xtext.core.version>2.41.0</org.eclipse.xtext.core.version>
 	</properties>
 
 	<dependencyManagement>
@@ -90,14 +90,14 @@
 				<version>${guava.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>org.eclipse.xtend</groupId>
-				<artifactId>org.eclipse.xtend.lib</artifactId>
-				<version>${org.eclipse.xtend.lib.version}</version>
+				<groupId>org.eclipse.xtext</groupId>
+				<artifactId>org.eclipse.xtext.lib</artifactId>
+				<version>${org.eclipse.xtext.lib.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>org.eclipse.xtend</groupId>
-				<artifactId>org.eclipse.xtend.core</artifactId>
-				<version>${org.eclipse.xtend.core.version}</version>
+				<groupId>org.eclipse.xtext</groupId>
+				<artifactId>org.eclipse.xtext.core</artifactId>
+				<version>${org.eclipse.xtext.core.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.google.auto.service</groupId>
@@ -147,12 +147,12 @@
 			<artifactId>guava</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.eclipse.xtend</groupId>
-			<artifactId>org.eclipse.xtend.lib</artifactId>
+			<groupId>org.eclipse.xtext</groupId>
+			<artifactId>org.eclipse.xtext.lib</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.eclipse.xtend</groupId>
-			<artifactId>org.eclipse.xtend.core</artifactId>
+			<groupId>org.eclipse.xtext</groupId>
+			<artifactId>org.eclipse.xtext.core</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.google.auto.service</groupId>
@@ -187,7 +187,7 @@
 					<version>1.18.20.0</version>
 				</plugin>
 				<plugin>
-					<groupId>org.eclipse.xtend</groupId>
+					<groupId>org.eclipse.xtext</groupId>
 					<artifactId>xtend-maven-plugin</artifactId>
 					<version>${xtend-maven-plugin.version}</version>
 				</plugin>
