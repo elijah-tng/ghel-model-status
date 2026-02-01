@@ -3,8 +3,8 @@
  */
 package tripleo.elijah.gen.nodes;
 
-import org.eclipse.jdt.annotation.NonNull;
 import org.jetbrains.annotations.Nullable;
+import org.jetbrains.annotations.NotNull;
 import tripleo.elijah.lang.i.*;
 
 /**

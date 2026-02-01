@@ -3,7 +3,7 @@
  */
 package tripleo.elijah.gen.nodes;
 
-import org.eclipse.jdt.annotation.NonNull;
+import org.jetbrains.annotations.NotNull;
 import tripleo.elijah.comp.GenBuffer;
 import tripleo.elijah.gen.CompilerContext;
 import tripleo.elijah.lang.i.*;
