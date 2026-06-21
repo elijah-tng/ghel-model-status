@@ -1,42 +1,42 @@
-///*
-// * Elijjah compiler, copyright Tripleo <oluoluolu+elijah@gmail.com>
-// *
-// * The contents of this library are released under the LGPL licence v3,
-// * the GNU Lesser General Public License text was downloaded from
-// * http://www.gnu.org/licenses/lgpl.html from `Version 3, 29 June 2007'
-// *
-// */
-//package tripleo.elijah_elevateder.stages.gen_fn;
-//
-//import org.jetbrains.annotations.NotNull;
-//import org.junit.Ignore;
-//import org.junit.Test;
-//import tripleo.elijah.lang.i.*;
-//import tripleo.elijah_fluffy.util.NotImplementedException;
-//import tripleo.elijah_elevated_durable.lang_impl.*;
-//import tripleo.elijah_elevateder.comp.i.extra.IPipelineAccess;
-//import tripleo.elijah_elevateder.stages.deduce.*;
-//import tripleo.elijah_elevateder.stages.gen_fn_c.GenFnC;
-//import tripleo.elijah_elevateder.stages.instructions.IdentIA;
-//import tripleo.elijah_elevateder.stages.instructions.InstructionArgument;
-//import tripleo.elijah_elevateder.test_help.Boilerplate;
-//import tripleo.elijah_fluffy.util.SimplePrintLoggerToRemoveSoon;
-//
-//import java.util.List;
-//
-//import static org.mockito.Mockito.mock;
-//import static org.mockito.Mockito.when;
-//import static tripleo.elijah_fluffy.util.Helpers.List_of;
-//
-///**
-// * Created 3/4/21 3:53 AM
-// */
-//public class TestIdentNormal {
-//
-//	@Ignore
-//	@Test // (expected = IllegalStateException.class) // TODO proves nothing
-//	public void test() {
-//
+/*
+ * Elijjah compiler, copyright Tripleo <oluoluolu+elijah@gmail.com>
+ *
+ * The contents of this library are released under the LGPL licence v3,
+ * the GNU Lesser General Public License text was downloaded from
+ * http://www.gnu.org/licenses/lgpl.html from `Version 3, 29 June 2007'
+ *
+ */
+package tripleo.elijah_elevateder.stages.gen_fn;
+
+import org.jetbrains.annotations.NotNull;
+import org.junit.Ignore;
+import org.junit.Test;
+import tripleo.elijah.lang.i.*;
+import tripleo.elijah_fluffy.util.NotImplementedException;
+import tripleo.elijah_elevated_durable.lang_impl.*;
+import tripleo.elijah_elevateder.comp.i.extra.IPipelineAccess;
+import tripleo.elijah_elevateder.stages.deduce.*;
+import tripleo.elijah_elevateder.stages.gen_fn_c.GenFnC;
+import tripleo.elijah_elevateder.stages.instructions.IdentIA;
+import tripleo.elijah_elevateder.stages.instructions.InstructionArgument;
+import tripleo.elijah_elevateder.test_help.Boilerplate;
+import tripleo.elijah_fluffy.util.SimplePrintLoggerToRemoveSoon;
+
+import java.util.List;
+
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
+import static tripleo.elijah_fluffy.util.Helpers.List_of;
+
+/**
+ * Created 3/4/21 3:53 AM
+ */
+public class TestIdentNormal {
+
+	@Ignore
+	@Test // (expected = IllegalStateException.class) // TODO proves nothing
+	public void test() {
+
 //		final FunctionDef fd = mock(FunctionDef.class);
 //		final Context ctx1 = mock(Context.class);
 //		final Context ctx2 = mock(Context.class);
@@ -95,11 +95,11 @@
 //				NotImplementedException.raise();
 //			}
 //		});
-//	}
-//
-//	@Ignore
-//	@Test // TODO just a mess
-//	public void test2() {
+	}
+
+	@Ignore
+	@Test // TODO just a mess
+	public void test2() {
 //		final Boilerplate boilerplate = new Boilerplate();
 //		boilerplate.get();
 //		final OS_Module mod = boilerplate.defaultMod();
@@ -220,10 +220,10 @@
 //				assert false;
 //			}
 //		});
-//	}
+	}
+
+}
+
 //
-//}
 //
-////
-////
-////
+//
