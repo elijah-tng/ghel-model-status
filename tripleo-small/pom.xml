@@ -20,25 +20,14 @@
 			<artifactId>cegont-upper</artifactId>
 			<version>2025.04.21</version>
 		</dependency>
-		<!--
-		<dependency>
-			<groupId>tripleo.elijah</groupId>
-			<artifactId>elijah-cegont-upper</artifactId>
-			<version>2025.04.21</version>
-		</dependency>
-		-->
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.13.2</version>
 			<scope>compile</scope>
 		</dependency>
-		<dependency>
-			<groupId>tripleo.elijah</groupId>
-			<artifactId>elevated-potential-core-api</artifactId>
-			<version>2024.elevated-potential.2</version>
-			<scope>compile</scope>
-		</dependency>
+
 	</dependencies>
 
 	<properties>
