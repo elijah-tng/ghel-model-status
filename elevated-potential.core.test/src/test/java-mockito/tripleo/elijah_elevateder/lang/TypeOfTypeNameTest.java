@@ -1,36 +1,36 @@
-///*
-// * Elijjah compiler, copyright Tripleo <oluoluolu+elijah@gmail.com>
-// *
-// * The contents of this library are released under the LGPL licence v3,
-// * the GNU Lesser General Public License text was downloaded from
-// * http://www.gnu.org/licenses/lgpl.html from `Version 3, 29 June 2007'
-// *
-// */
-//package tripleo.elijah_elevateder.lang;
-//
-//import org.junit.Ignore;
-//import org.junit.Test;
-//import tripleo.elijah.comp.Compilation0;
-//import tripleo.elijah.comp.i.ErrSink;
-//import tripleo.elijah.g.GResolveError;
-//import tripleo.elijah.lang.i.*;
-//import tripleo.elijah_elevated_durable.comp.EDL_ErrSink;
-//import tripleo.elijah_elevated_durable.lang_impl.*;
-//import tripleo.elijah_elevated_durable.pipelines.PipelineLogic;
-//import tripleo.elijah_elevateder.stages.deduce.DeduceTypes2;
-//import tripleo.elijah_elevateder.test_help.Boilerplate;
-//import tripleo.elijah_elevateder.util.Helpers0;
-//
-//import static org.junit.Assert.assertEquals;
-//import static org.mockito.Mockito.mock;
-//import static org.mockito.Mockito.when;
-//import static tripleo.elijah_fluffy.util.Helpers.List_of;
-//
-//public class TypeOfTypeNameTest {
-//
-//	@Ignore
-//	@Test
-//	public void typeOfComplexQualident() throws GResolveError {
+/*
+ * Elijjah compiler, copyright Tripleo <oluoluolu+elijah@gmail.com>
+ *
+ * The contents of this library are released under the LGPL licence v3,
+ * the GNU Lesser General Public License text was downloaded from
+ * http://www.gnu.org/licenses/lgpl.html from `Version 3, 29 June 2007'
+ *
+ */
+package tripleo.elijah_elevateder.lang;
+
+import org.junit.Ignore;
+import org.junit.Test;
+import tripleo.elijah.comp.Compilation0;
+import tripleo.elijah.comp.i.ErrSink;
+import tripleo.elijah.g.GResolveError;
+import tripleo.elijah.lang.i.*;
+import tripleo.elijah_elevated_durable.comp.EDL_ErrSink;
+import tripleo.elijah_elevated_durable.lang_impl.*;
+import tripleo.elijah_elevated_durable.pipelines.PipelineLogic;
+import tripleo.elijah_elevateder.stages.deduce.DeduceTypes2;
+import tripleo.elijah_elevateder.test_help.Boilerplate;
+import tripleo.elijah_elevateder.util.Helpers0;
+
+import static org.junit.Assert.assertEquals;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
+import static tripleo.elijah_fluffy.util.Helpers.List_of;
+
+public class TypeOfTypeNameTest {
+
+	@Ignore
+	@Test
+	public void typeOfComplexQualident() throws GResolveError {
 //		//
 //		// CREATE MOCKS
 //		//
@@ -80,11 +80,11 @@
 //		TypeName tn = t.resolve(ctx, deduceTypes2);
 ////		tripleo.elijah.util.Stupidity.println_out_2(tn);
 //		assertEquals(typeNameString, tn.toString());
-//	}
-//
-//	@Ignore
-//	@Test
-//	public void typeOfComplexQualident2() throws GResolveError {
+	}
+
+	@Ignore
+	@Test
+	public void typeOfComplexQualident2() throws GResolveError {
 //		//
 //		// CREATE MOCK
 //		//
@@ -162,11 +162,11 @@
 //		TypeName tn = t.resolve(ctx, deduceTypes2);
 ////		tripleo.elijah.util.Stupidity.println_out_2(tn);
 //		assertEquals(typeNameString, tn.toString());
-//	}
-//
-//	@Ignore
-//	@Test
-//	public void typeOfComplexQualident3() throws GResolveError {
+	}
+
+	@Ignore
+	@Test
+	public void typeOfComplexQualident3() throws GResolveError {
 //		//
 //		// CREATE MOCK
 //		//
@@ -231,11 +231,11 @@
 //		TypeName tn = t.resolve(ctx, deduceTypes2);
 ////		tripleo.elijah.util.Stupidity.println_out_2(tn);
 //		assertEquals(typeNameString, tn.toString());
-//	}
-//
-//	@Ignore
-//	@Test
-//	public void typeOfSimpleQualident() throws GResolveError {
+	}
+
+	@Ignore
+	@Test
+	public void typeOfSimpleQualident() throws GResolveError {
 //		//
 //		// CREATE MOCKS
 //		//
@@ -286,10 +286,10 @@
 //		final TypeName tn = t.resolve(ctx, deduceTypes2);
 ////		tripleo.elijah.util.Stupidity.println_out_2(tn);
 //		assertEquals(typeNameString, tn.toString());
-//	}
+	}
+
+}
+
 //
-//}
 //
-////
-////
-////
+//

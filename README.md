@@ -3,8 +3,8 @@ Elijah model-status (elevated-potential)
 
 Moving 2 things here:
 
-1. javac stuff (not yet)
-2. the abstraction of the AST/CST
+1. javac stuff (not yet, google)
+2. the abstraction of the AST/CST (the LST license)
 
 
 Revised Goals
@@ -17,12 +17,17 @@ https://gitlab.com/elijah-team/documentation/petal-to-the-medal/-/blob/main/gini
 
 https://gitlab.com/elijah-team/api-components/model-status
 
+- Something about (bad) design
 
-Blah
------
-
-- `elevated` implementation looks safe to remove
+Checklist
+----------
 
 - keeping `xxx-model-status` until integration is complete (wrong name)
 
-- gradle and clojure builds, also [kobalt](https://github.com/cbeust/kobalt)
+- gradle build, because gitlab
+
+- clojure build, because simplicity
+
+- stay on maven, because not that smart??
+
+- Vestigial gen, small, typeinf, tests: leave it somewhere (dormant??why are you obsessed with this?)

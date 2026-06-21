@@ -1,90 +1,90 @@
-///* -*- Mode: Java; tab-width: 4; indent-tabs-mode: t; c-basic-offset: 4 -*- */
-///*
-// * Elijjah compiler, copyright Tripleo <oluoluolu+elijah@gmail.com>
-// *
-// * The contents of this library are released under the LGPL licence v3,
-// * the GNU Lesser General Public License text was downloaded from
-// * http://www.gnu.org/licenses/lgpl.html from `Version 3, 29 June 2007'
-// *
-// */
-//package tripleo.elijah_elevateder.slir;
+/* -*- Mode: Java; tab-width: 4; indent-tabs-mode: t; c-basic-offset: 4 -*- */
+/*
+ * Elijjah compiler, copyright Tripleo <oluoluolu+elijah@gmail.com>
+ *
+ * The contents of this library are released under the LGPL licence v3,
+ * the GNU Lesser General Public License text was downloaded from
+ * http://www.gnu.org/licenses/lgpl.html from `Version 3, 29 June 2007'
+ *
+ */
+package tripleo.elijah_elevateder.slir;
+
+import org.junit.Ignore;
+import org.junit.Test;
+import tripleo.elijah.comp.Compilation0;
+import tripleo.elijah.lang.i.OS_Module;
+import tripleo.elijah.lang.i.OS_Package;
+import tripleo.elijah_elevated_durable.lang_impl.OS_ModuleImpl;
+import tripleo.elijah_elevated_durable.lang_impl.OS_PackageImpl;
+import tripleo.elijah_elevateder.comp.i.Compilation;
+import tripleo.elijah_elevateder.lang.imports.NormalImportStatement;
+import tripleo.elijah_elevateder.util.Helpers0;
+
+import static org.mockito.Mockito.mock;
+
+/**
+ * Created 11/6/21 8:11 AM
+ */
+public class TestBasicSlir {
+
+//	//	@Test
+//	public final void testBasic() throws IOException {
+//		final List<String> ez_files = Files.readLines(new File("test/basic/ez_files.txt"), Charsets.UTF_8);
+//		final Map<Integer, Integer> errorCount = new HashMap<Integer, Integer>();
+//		int index = 0;
 //
-//import org.junit.Ignore;
-//import org.junit.Test;
-//import tripleo.elijah.comp.Compilation0;
-//import tripleo.elijah.lang.i.OS_Module;
-//import tripleo.elijah.lang.i.OS_Package;
-//import tripleo.elijah_elevated_durable.lang_impl.OS_ModuleImpl;
-//import tripleo.elijah_elevated_durable.lang_impl.OS_PackageImpl;
-//import tripleo.elijah_elevateder.comp.i.Compilation;
-//import tripleo.elijah_elevateder.lang.imports.NormalImportStatement;
-//import tripleo.elijah_elevateder.util.Helpers0;
+//		for (String s : ez_files) {
+////			List<String> args = List_of("test/basic", "-sO"/*, "-out"*/);
+//			final ErrSink eee = new StdErrSink();
+//			final Compilation c = new Compilation(eee, new IO());
 //
-//import static org.mockito.Mockito.mock;
+//			c.feedCmdLine(List_of(s, "-sO"));
 //
-///**
-// * Created 11/6/21 8:11 AM
-// */
-//public class TestBasicSlir {
+//			if (c.errorCount() != 0)
+//				tripleo.elijah.util.SimplePrintLoggerToRemoveSoon.println_err_4(String.format("Error count should be 0 but is %d for %s", c.errorCount(), s));
+//			errorCount.put(index, c.errorCount());
+//			index++;
+//		}
 //
-////	//	@Test
-////	public final void testBasic() throws IOException {
-////		final List<String> ez_files = Files.readLines(new File("test/basic/ez_files.txt"), Charsets.UTF_8);
-////		final Map<Integer, Integer> errorCount = new HashMap<Integer, Integer>();
-////		int index = 0;
-////
-////		for (String s : ez_files) {
-//////			List<String> args = List_of("test/basic", "-sO"/*, "-out"*/);
-////			final ErrSink eee = new StdErrSink();
-////			final Compilation c = new Compilation(eee, new IO());
-////
-////			c.feedCmdLine(List_of(s, "-sO"));
-////
-////			if (c.errorCount() != 0)
-////				tripleo.elijah.util.SimplePrintLoggerToRemoveSoon.println_err_4(String.format("Error count should be 0 but is %d for %s", c.errorCount(), s));
-////			errorCount.put(index, c.errorCount());
-////			index++;
-////		}
-////
-////		// README this needs changing when running make
-////		assertEquals(7, (int) errorCount.get(0)); // TODO Error count obviously should be 0
-////		assertEquals(20, (int) errorCount.get(1)); // TODO Error count obviously should be 0
-////		assertEquals(9, (int) errorCount.get(2)); // TODO Error count obviously should be 0
-////	}
-////
-////	//		@Test
-////	public final void testBasic_listfolders3() throws IOException {
-////		String s = "test/basic/listfolders3/listfolders3.ez";
-////
-////		final ErrSink eee = new StdErrSink();
-////		final Compilation c = new Compilation(eee, new IO());
-////
-////		c.feedCmdLine(List_of(s, "-sO"));
-////
-////		if (c.errorCount() != 0)
-////			tripleo.elijah.util.SimplePrintLoggerToRemoveSoon.println_err_4(String.format("Error count should be 0 but is %d for %s", c.errorCount(), s));
-////
-////		assertEquals(5, c.errorCount()); // TODO Error count obviously should be 0
-////	}
-////
-////	//		@Test
-////	public final void testBasic_listfolders4() throws IOException {
-////		String s = "test/basic/listfolders4/listfolders4.ez";
-////
-////		final ErrSink eee = new StdErrSink();
-////		final Compilation c = new Compilation(eee, new IO());
-////
-////		c.feedCmdLine(List_of(s, "-sO"));
-////
-////		if (c.errorCount() != 0)
-////			tripleo.elijah.util.SimplePrintLoggerToRemoveSoon.println_err_4(String.format("Error count should be 0 but is %d for %s", c.errorCount(), s));
-////
-////		assertEquals(5, c.errorCount()); // TODO Error count obviously should be 0
-////	}
+//		// README this needs changing when running make
+//		assertEquals(7, (int) errorCount.get(0)); // TODO Error count obviously should be 0
+//		assertEquals(20, (int) errorCount.get(1)); // TODO Error count obviously should be 0
+//		assertEquals(9, (int) errorCount.get(2)); // TODO Error count obviously should be 0
+//	}
 //
-//	@Ignore
-//	@Test
-//	public final void testBasic_fact1() {
+//	//		@Test
+//	public final void testBasic_listfolders3() throws IOException {
+//		String s = "test/basic/listfolders3/listfolders3.ez";
+//
+//		final ErrSink eee = new StdErrSink();
+//		final Compilation c = new Compilation(eee, new IO());
+//
+//		c.feedCmdLine(List_of(s, "-sO"));
+//
+//		if (c.errorCount() != 0)
+//			tripleo.elijah.util.SimplePrintLoggerToRemoveSoon.println_err_4(String.format("Error count should be 0 but is %d for %s", c.errorCount(), s));
+//
+//		assertEquals(5, c.errorCount()); // TODO Error count obviously should be 0
+//	}
+//
+//	//		@Test
+//	public final void testBasic_listfolders4() throws IOException {
+//		String s = "test/basic/listfolders4/listfolders4.ez";
+//
+//		final ErrSink eee = new StdErrSink();
+//		final Compilation c = new Compilation(eee, new IO());
+//
+//		c.feedCmdLine(List_of(s, "-sO"));
+//
+//		if (c.errorCount() != 0)
+//			tripleo.elijah.util.SimplePrintLoggerToRemoveSoon.println_err_4(String.format("Error count should be 0 but is %d for %s", c.errorCount(), s));
+//
+//		assertEquals(5, c.errorCount()); // TODO Error count obviously should be 0
+//	}
+
+	@Ignore
+	@Test
+	public final void testBasic_fact1() {
 //		String s0 = "test/basic/fact1";
 //		String s = "test/basic/fact1/main2";
 //
@@ -202,10 +202,10 @@
 //		// TODO finish function
 //		// TODO refactor to sources
 //		// TODO add asserts
-//	}
+	}
+
+}
+
 //
-//}
+// vim:set shiftwidth=4 softtabstop=0 noexpandtab:
 //
-////
-//// vim:set shiftwidth=4 softtabstop=0 noexpandtab:
-////
