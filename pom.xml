@@ -31,8 +31,8 @@
 		<!--<jacoco.version>0.8.9</jacoco.version>-->
 		<guava.version>33.3.1-jre</guava.version>
 		<maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
-		<org.eclipse.xtend.lib.version>2.41.0</org.eclipse.xtend.lib.version>
-		<org.eclipse.xtend.core.version>2.41.0</org.eclipse.xtend.core.version>
+<!--		<org.eclipse.xtend.lib.version>2.41.0</org.eclipse.xtend.lib.version>-->
+<!--		<org.eclipse.xtend.core.version>2.41.0</org.eclipse.xtend.core.version>-->
 	</properties>
 
 	<dependencyManagement>
@@ -118,10 +118,10 @@
 	</dependencyManagement>
 
 	<dependencies>
-		<dependency>
-			<groupId>org.antlr</groupId>
-			<artifactId>antlr-runtime</artifactId>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>org.antlr</groupId>-->
+<!--			<artifactId>antlr-runtime</artifactId>-->
+<!--		</dependency>-->
 		<dependency>
 			<groupId>com.github.spotbugs</groupId>
 			<artifactId>spotbugs-annotations</artifactId>
@@ -146,14 +146,14 @@
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.eclipse.xtend</groupId>
-			<artifactId>org.eclipse.xtend.lib</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.xtend</groupId>
-			<artifactId>org.eclipse.xtend.core</artifactId>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>org.eclipse.xtend</groupId>-->
+<!--			<artifactId>org.eclipse.xtend.lib</artifactId>-->
+<!--		</dependency>-->
+<!--		<dependency>-->
+<!--			<groupId>org.eclipse.xtend</groupId>-->
+<!--			<artifactId>org.eclipse.xtend.core</artifactId>-->
+<!--		</dependency>-->
 		<dependency>
 			<groupId>com.google.auto.service</groupId>
 			<artifactId>auto-service-annotations</artifactId>
@@ -186,16 +186,17 @@
 					<artifactId>lombok-maven-plugin</artifactId>
 					<version>1.18.20.0</version>
 				</plugin>
-				<plugin>
-					<groupId>org.eclipse.xtend</groupId>
-					<artifactId>xtend-maven-plugin</artifactId>
-					<version>${xtend-maven-plugin.version}</version>
-				</plugin>
+
+<!--				<plugin>-->
+<!--					<groupId>org.eclipse.xtend</groupId>-->
+<!--					<artifactId>xtend-maven-plugin</artifactId>-->
+<!--					<version>${xtend-maven-plugin.version}</version>-->
+<!--				</plugin>-->
 
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
-					<version>3.13.0</version>
+					<version>3.14.1</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
