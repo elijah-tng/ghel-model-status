@@ -18,3 +18,6 @@
 /.clj-kondo/
 /.idea/compiler.xml
 /.idea/encodings.xml
+/ghel-model-status.iml
+/tripleo-small/tripleo-small.iml
+/xxx-model-status/xxx-model-status.iml
