@@ -1,6 +1,7 @@
 name: ghel-model-status on gh-ci with maven from wrapper
 
 on:
+  push:
   pull_request:
   workflow_dispatch:
 
