@@ -1,7 +1,5 @@
 /.idea/workspace.xml
-/.idea/gitlab-quickmr.xml
-/.idea/uiDesigner.xml
-#######/.idea/**
+
 /bin/
 /out/
 /output/
@@ -14,5 +12,12 @@
 
 /doc/
 
-#######/COMP*/
 /target/**
+
+/.lsp/.cache/
+/.clj-kondo/
+/.idea/compiler.xml
+/.idea/encodings.xml
+/ghel-model-status.iml
+/tripleo-small/tripleo-small.iml
+/xxx-model-status/xxx-model-status.iml
