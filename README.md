@@ -22,12 +22,16 @@ https://gitlab.com/elijah-team/api-components/model-status
 Checklist
 ----------
 
-- keeping `xxx-model-status` until integration is complete (wrong name)
+- keeping wrong name of `xxx-model-status` until integration is complete
 
-- gradle build, because gitlab
+- gradle build, because gitlab (maven (at least version 3) is as close to nightmare as i can take, though i have said this alot)
 
-- clojure build, because simplicity
+- clojure build, because simplicity (see above)
 
-- stay on maven, because not that smart??
+- Vestigial gen, small, typeinf, tests: leave it somewhere, and somewhere is here for now
 
-- Vestigial gen, small, typeinf, tests: leave it somewhere (dormant??why are you obsessed with this?)
+
+Questions
+----------
+
+Look around for `5dd4c4c71f` (aka not verification)

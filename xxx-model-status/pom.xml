@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
 		<groupId>tripleo.elijah</groupId>
 		<artifactId>ghel-model-status</artifactId>
-		<version>2024.elevated-potential.2</version>
+		<version>2026.elevated-potential.8</version>
 	</parent>
 
 	<artifactId>xxx-model-status</artifactId>
-	<version>2024.elevated-potential.2</version>
+	<version>2026.elevated-potential.8</version>
 
 	<dependencies>
 
