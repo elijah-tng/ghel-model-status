@@ -7,12 +7,12 @@
     <parent>
         <groupId>tripleo.elijah</groupId>
         <artifactId>ghel-model-status</artifactId>
-        <version>2024.elevated-potential.2</version>
+	    <version>2026.elevated-potential.8</version>
     </parent>
 
     <!--<groupId>tripleo.elijah</groupId>-->
     <artifactId>tripleo-small</artifactId>
-    <!--<version>2024.elevated-potential.2</version>-->
+<!--	<version>2026.elevated-potential.8</version>-->
 
 	<dependencies>
 		<dependency>
