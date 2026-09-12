@@ -12,17 +12,17 @@ jobs:
     timeout-minutes: 5
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4 # add bot
 
       - name: Set up JDK 17
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v4 # add bot
         with:
           java-version: '17'
           distribution: 'temurin'
           cache: gradle
 
       - name: Run tests
-        run: ./gradlew publishLocal test
+        run: ./gradlew test
 
       - name: Package with Maven
-        run: ./gradlew assemble
+        run: ./gradlew pTML #assemble
