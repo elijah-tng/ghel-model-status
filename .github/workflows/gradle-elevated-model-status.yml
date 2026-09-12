@@ -19,10 +19,12 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-          cache: maven
+          cache: gradle
 
-      - name: Run tests
-        run: ./gradlew publishLocal test
+      - name: Build with gradle
+        run: ./gradlew clean build
+      - name: Run tests with gradle
+        run: ./gradlew  test
 
       - name: Package with Maven
-        run: ./gradlew assemble
+        run: ./gradlew assemble #pTML
