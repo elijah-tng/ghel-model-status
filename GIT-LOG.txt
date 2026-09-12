@@ -1,0 +1,19 @@
+commit a65259d8f1b2dc181e8ac6702d8ba165b0163b7c
+Author: tripleo1 <50311859+tripleo1@users.noreply.github.com>
+Date:   Wed Sep 9 02:00:26 2026 -0400
+
+    Compiles in idea w/ temurin-17
+
+commit bb28cefed462d1b2a80e8df76f5bf37c8e0a6023
+Author: Tripleo Nova <tripleo@tripleo.milkyway>
+Date:   Mon Dec 18 02:12:44 2023 -0500
+
+    Forgot conventions
+
+commit 94cb71ea48069ec7e02e354ceae9d6103bd11b11
+Author: Tripleo Nova <tripleo@tripleo.milkyway>
+Date:   Mon Dec 18 02:08:05 2023 -0500
+
+    Initial
+    
+    Just a trial run
