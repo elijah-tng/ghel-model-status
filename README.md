@@ -1,37 +1,44 @@
 Elijah model-status (elevated-potential)
 =========================================
 
+jetbrains-21+deb (wmb...) is disobedient here
+fine with temurin-17/mise
+
+```shell
+mise exec java@temurin-17 -- ./gradlew test
+# assemble, pTML, ??
+```
+
+---
+
+
 Moving 2 things here:
 
-1. javac stuff (not yet, google)
-2. the abstraction of the AST/CST (the LST license)
+1. javac stuff (not yet, google; ascopes??)
+2. the abstraction of the AST/CST (the LST license should be fine)
 
 
-Revised Goals
---------------
-
-- ...
-
+---
 
 https://gitlab.com/elijah-team/documentation/petal-to-the-medal/-/blob/main/ginitiatives/G7.md
 
-https://gitlab.com/elijah-team/api-components/model-status
+https://gitlab.com/elijah-team/api-components/model-status (more or less this branch)
 
 - Something about (bad) design
 
-Checklist
-----------
+Checklist encoded in non-optimal markdown
+------------------------------------------
 
-- keeping wrong name of `xxx-model-status` until integration is complete
+[ ] keeping wrong name of `xxx-model-status` until integration is complete
 
-- gradle build, because gitlab (maven (at least version 3) is as close to nightmare as i can take, though i have said this alot)
+[ ] gradle build is in this branch, need to make a decision (and refuse to learn a new plugin architecture)
 
-- clojure build, because simplicity (see above)
+[ ] clojure build seems unlikely and or unnecessary
 
-- Vestigial gen, small, typeinf, tests: leave it somewhere, and somewhere is here for now
+[ ] meh: Vestigial gen, small, typeinf, tests: leave it somewhere, and somewhere is here for now
 
+[ ] Look around for `5dd4c4c71f` (aka not verification)
 
-Questions
-----------
+[x] Do not respond to foolishness
 
-Look around for `5dd4c4c71f` (aka not verification)
+[ ] Cry in the bathroom about sbt
