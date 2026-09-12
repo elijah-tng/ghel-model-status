@@ -42,3 +42,15 @@ Checklist encoded in non-optimal markdown
 [x] Do not respond to foolishness
 
 [ ] Cry in the bathroom about sbt
+
+
+
+TODO
+-----
+
+1. Fix gradle version (we are on 8.2?)
+2. Add tests
+   2b. See if compile-testing or ascopes/...tbd works here?
+3. Pretend like gh-ci is going to work
+4. SOGOTP renovate
+5. SOGOTP build.deps
