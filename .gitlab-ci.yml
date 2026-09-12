@@ -2,9 +2,9 @@
 
 image: maven:alpine
 
-#before_script:
-#  - GRADLE_USER_HOME="$(pwd)/.gradle"
-#  - export GRADLE_USER_HOME
+before_script:
+  - GRADLE_USER_HOME="$(pwd)/.gradle"
+  - export GRADLE_USER_HOME
 
 build:
   stage: build
@@ -15,6 +15,7 @@ build:
     paths:
       - target
       - .m2
+      - .gradle
 
 publish_job:
   stage: deploy
@@ -23,7 +24,7 @@ publish_job:
       when: never
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
   script:
-    - mvn deploy
+    - ./gradlew publishLocal
 
 release_job:
   stage: deploy

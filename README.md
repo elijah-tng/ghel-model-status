@@ -35,3 +35,14 @@ Questions
 ----------
 
 Look around for `5dd4c4c71f` (aka not verification)
+
+
+TODO
+-----
+
+1. Fix gradle version (we are on 8.2?)
+2. Add tests
+2b. See if compile-testing or ascopes/...tbd works here?
+3. Pretend like gh-ci is going to work
+4. SOGOTP renovate
+5. SOGOTP build.deps
