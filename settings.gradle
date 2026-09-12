@@ -3,6 +3,9 @@ plugins {
 }
 
 rootProject.name = 'elijah-model-status'
+
 //include(':dlog')
 
+include(':tripleo-small')
+include(':xxx-model-status')
 include(':model-status')

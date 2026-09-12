@@ -1,0 +1,4 @@
+[tools]
+gradle = "latest" # no
+maven = "3.9.9"
+mvnd = "latest" # huh/bb+huh
