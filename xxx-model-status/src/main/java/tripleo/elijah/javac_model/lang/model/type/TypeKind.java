@@ -1,65 +1,180 @@
+/*
+ * Copyright (c) 2005, 2022, Oracle and/or its affiliates. All rights reserved.
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ *
+ * This code is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License version 2 only, as
+ * published by the Free Software Foundation.  Oracle designates this
+ * particular file as subject to the "Classpath" exception as provided
+ * by Oracle in the LICENSE file that accompanied this code.
+ *
+ * This code is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ * FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
+ * version 2 for more details (a copy is included in the LICENSE file that
+ * accompanied this code).
+ *
+ * You should have received a copy of the GNU General Public License version
+ * 2 along with this work; if not, write to the Free Software Foundation,
+ * Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
+ *
+ * Please contact Oracle, 500 Oracle Parkway, Redwood Shores, CA 94065 USA
+ * or visit www.oracle.com if you need additional information or have any
+ * questions.
+ */
+
 package tripleo.elijah.javac_model.lang.model.type;
 
 
+/**
+ * The kind of a type mirror.
+ *
+ * <p>Note that it is possible additional type kinds will be added to
+ * accommodate new, currently unknown, language structures added to
+ * future versions of the Java programming language.
+ *
+ * @see TypeMirror
+ * @since 1.6
+ */
 public enum TypeKind {
-	BOOLEAN,
+    /**
+     * The primitive type {@code boolean}.
+     */
+    BOOLEAN,
 
-	BYTE,
+    /**
+     * The primitive type {@code byte}.
+     */
+    BYTE,
 
-	SHORT,
+    /**
+     * The primitive type {@code short}.
+     */
+    SHORT,
 
-	INT,
+    /**
+     * The primitive type {@code int}.
+     */
+    INT,
 
-	LONG,
+    /**
+     * The primitive type {@code long}.
+     */
+    LONG,
 
-	CHAR,
+    /**
+     * The primitive type {@code char}.
+     */
+    CHAR,
 
-	FLOAT,
+    /**
+     * The primitive type {@code float}.
+     */
+    FLOAT,
 
-	DOUBLE,
+    /**
+     * The primitive type {@code double}.
+     */
+    DOUBLE,
 
-	VOID,
+    /**
+     * The pseudo-type corresponding to the keyword {@code void}.
+     * @see NoType
+     */
+    VOID,
 
-	NONE,
+    /**
+     * A pseudo-type used where no actual type is appropriate.
+     * @see NoType
+     */
+    NONE,
 
-	NULL,
+    /**
+     * The null type.
+     */
+    NULL,
 
-	ARRAY,
+    /**
+     * An array type.
+     */
+    ARRAY,
 
-	DECLARED,
+    /**
+     * A class or interface type.
+     */
+    DECLARED,
 
-	ERROR,
+    /**
+     * A class or interface type that could not be resolved.
+     */
+    ERROR,
 
-	TYPEVAR,
+    /**
+     * A type variable.
+     */
+    TYPEVAR,
 
-	WILDCARD,
+    /**
+     * A wildcard type argument.
+     */
+    WILDCARD,
 
-	PACKAGE,
+    /**
+     * A pseudo-type corresponding to a package element.
+     * @see NoType
+     */
+    PACKAGE,
 
-	EXECUTABLE,
+    /**
+     * A method, constructor, or initializer.
+     */
+    EXECUTABLE,
 
-	OTHER,
+    /**
+     * An implementation-reserved type.
+     * This is not the type you are looking for.
+     */
+    OTHER,
 
-	UNION,
+    /**
+      * A union type.
+      *
+      * @since 1.7
+      */
+    UNION,
 
-	INTERSECTION,
+    /**
+      * An intersection type.
+      *
+      * @since 1.8
+      */
+    INTERSECTION,
 
-	MODULE;
+    /**
+     * A pseudo-type corresponding to a module element.
+     * @see NoType
+     * @since 9
+     */
+    MODULE;
 
-	public boolean isPrimitive() {
-		switch (this) {
-		case BOOLEAN:
-		case BYTE:
-		case SHORT:
-		case INT:
-		case LONG:
-		case CHAR:
-		case FLOAT:
-		case DOUBLE:
-			return true;
+    /**
+     * {@return {@code true} if this kind corresponds to a primitive
+     * type and {@code false} otherwise}
+     */
+    public boolean isPrimitive() {
+        switch(this) {
+        case BOOLEAN:
+        case BYTE:
+        case SHORT:
+        case INT:
+        case LONG:
+        case CHAR:
+        case FLOAT:
+        case DOUBLE:
+            return true;
 
-		default:
-			return false;
-		}
-	}
+        default:
+            return false;
+        }
+    }
 }

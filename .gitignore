@@ -1,5 +1,9 @@
 /.idea/workspace.xml
 /.gradle
+/buildSrc/build
+/buildSrc/.gradle
+
+/doc/
 
 /target/**
 /build/
