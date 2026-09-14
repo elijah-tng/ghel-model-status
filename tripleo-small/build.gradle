@@ -12,3 +12,4 @@ dependencies {
 }
 
 description = 'tripleo-small'
+version = 'elevated-potential.2023.5'
