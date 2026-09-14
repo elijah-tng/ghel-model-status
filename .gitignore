@@ -1,12 +1,4 @@
 /.idea/workspace.xml
-
-/bin/
-/out/
-/output/
-*/bin/**
-*/build/**
-*/target/**
-
 /.gradle
 /buildSrc/build
 /buildSrc/.gradle
@@ -14,15 +6,11 @@
 /doc/
 
 /target/**
+/build/
 
-/.lsp/.cache/
-/.clj-kondo/
-/.idea/compiler.xml
-/.idea/encodings.xml
-/ghel-model-status.iml
-/tripleo-small/tripleo-small.iml
-/xxx-model-status/xxx-model-status.iml
-.idea/jarRepositories.xml
-.idea/misc.xml
-.idea/modules.xml
-.idea/vcs.xml
+/**/*.iml
+
+/.idea
+!/.idea/.name
+/buildSrc/.gradle
+/*/build

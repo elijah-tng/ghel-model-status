@@ -1,5 +1,6 @@
 plugins {
   id 'tripleo.elijah.java-conventions'
+  //id 'buildlogic.java-conventions'
 }
 
 repositories {
