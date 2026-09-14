@@ -1,0 +1,25 @@
+name: ghel-model-status on gh-ci with gradle
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    # don't like this, leave as a safeguard
+    timeout-minutes: 5
+
+    steps:
+      - uses: actions/checkout@v6
+
+      # Assuming this has built-in caching?
+      - uses: jdx/mise-action@v4
+
+      - name: Build with gradle through mise
+        run: mise exec --  ./gradlew clean assemble
+
+      # Are we looking for another target/task?
+      - name: Package with gradle through mise 
+        run: true mise exec --  ./gradlew pTML
