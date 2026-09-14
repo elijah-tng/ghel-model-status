@@ -1,0 +1,25 @@
+plugins {
+  id 'groovy-gradle-plugin'
+
+  id 'maven-publish'
+}
+
+repositories {
+  gradlePluginPortal()
+  maven {url "https://plugins.gradle.org/m2"}
+}
+
+publishing {
+  publications {
+    customLibrary(MavenPublication) {
+      from components.java
+    }
+  }
+
+    repositories {
+        maven {
+            name = 'sampleRepo'
+            url = layout.buildDirectory.dir("repo")
+        }
+    }
+}
