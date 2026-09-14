@@ -9,35 +9,35 @@ mise exec java@temurin-17 -- ./gradlew test
 # assemble, pTML, ??
 ```
 
+
+- Includes gladle from gitlab
+- Includes old bad design from maven in a new package
+
 ---
 
 
-Moving 2 things here:
+Moving things here:
 
-1. javac stuff (not yet, google)
-2. the abstraction of the AST/CST (the LST license)
+[x] javac skeleton (not yet, google)
+[ ] javac adapter
+[ ] abstraction of the AST/CST (the LST license)
 
 
-Revised Goals
---------------
-
-- ...
-
+---
 
 https://gitlab.com/elijah-team/documentation/petal-to-the-medal/-/blob/main/ginitiatives/G7.md
 
 https://gitlab.com/elijah-team/api-components/model-status
 
-- Something about (bad) design
 
 Checklist encoded in non-optimal markdown
 ------------------------------------------
 
 [ ] keeping wrong name of `xxx-model-status` until integration is complete
 
-[ ] gradle build is in this branch, need to make a decision (and refuse to learn a new plugin architecture)
+[x] gradle build is in this branch, need to make a decision (and refuse to learn a new plugin architecture)
 
-[ ] clojure build seems unlikely and or unnecessary
+[x] clojure build seems unlikely and or unnecessary
 
 [ ] meh: Vestigial gen, small, typeinf, tests: leave it somewhere, and somewhere is here for now
 
@@ -47,14 +47,14 @@ Checklist encoded in non-optimal markdown
 
 [ ] Cry in the bathroom about sbt
 
+[ ] SOGOTP renovate
 
+[ ] SOGOTP build.deps
 
-TODO
------
+[x] Pretend like gh-ci is going to work
 
-1. Fix gradle version (we are on 8.2?)
-2. Add tests
-   2b. See if compile-testing or ascopes/...tbd works here?
-3. Pretend like gh-ci is going to work
-4. SOGOTP renovate
-5. SOGOTP build.deps
+[x] Pretend like gh deployment is going to work
+
+[ ] Decide on gradle version 8.2 vs 9.x.x
+
+[ ] Add tests (gct)
