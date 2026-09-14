@@ -8,7 +8,8 @@
 */target/**
 
 /.gradle
-/buildSrc/**
+/buildSrc/build
+/buildSrc/.gradle
 
 /doc/
 
