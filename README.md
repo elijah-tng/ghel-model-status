@@ -14,15 +14,19 @@ mise exec java@temurin-17 -- ./gradlew test
 
 Moving 2 things here:
 
-1. javac stuff (not yet, google; ascopes??)
-2. the abstraction of the AST/CST (the LST license should be fine)
+1. javac stuff (not yet, google)
+2. the abstraction of the AST/CST (the LST license)
 
 
----
+Revised Goals
+--------------
+
+- ...
+
 
 https://gitlab.com/elijah-team/documentation/petal-to-the-medal/-/blob/main/ginitiatives/G7.md
 
-https://gitlab.com/elijah-team/api-components/model-status (more or less this branch)
+https://gitlab.com/elijah-team/api-components/model-status
 
 - Something about (bad) design
 
@@ -42,3 +46,15 @@ Checklist encoded in non-optimal markdown
 [x] Do not respond to foolishness
 
 [ ] Cry in the bathroom about sbt
+
+
+
+TODO
+-----
+
+1. Fix gradle version (we are on 8.2?)
+2. Add tests
+   2b. See if compile-testing or ascopes/...tbd works here?
+3. Pretend like gh-ci is going to work
+4. SOGOTP renovate
+5. SOGOTP build.deps
