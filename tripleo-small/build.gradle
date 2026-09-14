@@ -3,13 +3,14 @@
  */
 
 plugins {
-    id 'buildlogic.java-conventions'
-    //id 'tripleo.elijah.java-conventions'
+    //id 'buildlogic.java-conventions'
+    id 'tripleo.elijah.java-conventions'
 }
 
 dependencies {
-    api libs.com.github.elijah.tng.cegont.upper
+    //api libs.com.github.elijah.tng.cegont.upper
     api libs.junit.junit
 }
 
 description = 'tripleo-small'
+version = 'elevated-potential.2023.5'
