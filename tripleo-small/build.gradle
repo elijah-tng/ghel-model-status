@@ -7,7 +7,7 @@ plugins {
 }
 
 dependencies {
-    api 'com.github.elijah-tng:cegont-upper:2025.04.21'
+    //api 'com.github.elijah-tng:cegont-upper:2025.04.21'
     api 'junit:junit:4.13.2'
 }
 
